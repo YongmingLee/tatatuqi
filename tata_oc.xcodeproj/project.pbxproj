@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F0D8E8E5B1F5A892BB8D57A /* libPods-tata_oc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */; };
+		4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915A21269742003D59D0 /* YMAIChatQQ.m */; };
+		4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915D212697AC003D59D0 /* YMChatViewController.m */; };
+		4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22685B20D20673006D54D1 /* AppDelegate.m */; };
+		4D22685F20D20673006D54D1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22685E20D20673006D54D1 /* ViewController.m */; };
+		4D22686220D20673006D54D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686020D20673006D54D1 /* Main.storyboard */; };
+		4D22686420D20675006D54D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686320D20675006D54D1 /* Assets.xcassets */; };
+		4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686520D20675006D54D1 /* LaunchScreen.storyboard */; };
+		4D22686A20D20675006D54D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22686920D20675006D54D1 /* main.m */; };
+		4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22687420D2086A006D54D1 /* YMScrollViewController.m */; };
+		4D39791B20DCA7B50035C478 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791A20DCA7B50035C478 /* AudioToolbox.framework */; };
+		4D39791D20DCA7BD0035C478 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791C20DCA7BD0035C478 /* AVFoundation.framework */; };
+		4D39791F20DCA7C60035C478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791E20DCA7C60035C478 /* CoreGraphics.framework */; };
+		4D39792120DCA7CF0035C478 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792020DCA7CF0035C478 /* CoreMedia.framework */; };
+		4D39792320DCA7DB0035C478 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792220DCA7DB0035C478 /* CoreVideo.framework */; };
+		4D39792520DCA7F90035C478 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792420DCA7F90035C478 /* libbz2.tbd */; };
+		4D39792720DCA8010035C478 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792620DCA8010035C478 /* libz.tbd */; };
+		4D39792920DCA80B0035C478 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792820DCA80B0035C478 /* MediaPlayer.framework */; };
+		4D39792B20DCA8150035C478 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792A20DCA8150035C478 /* MobileCoreServices.framework */; };
+		4D39792D20DCA81E0035C478 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792C20DCA81E0035C478 /* OpenGLES.framework */; };
+		4D39792F20DCA8260035C478 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39792E20DCA8260035C478 /* QuartzCore.framework */; };
+		4D39793120DCA82F0035C478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793020DCA82F0035C478 /* UIKit.framework */; };
+		4D39793320DCA8390035C478 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793220DCA8390035C478 /* VideoToolbox.framework */; };
+		4D39793520DCAC5F0035C478 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793420DCAC5F0035C478 /* libc++.tbd */; };
+		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4D88DAD620FF27C000470445 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4D19915921269742003D59D0 /* YMAIChatQQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAIChatQQ.h; sourceTree = "<group>"; };
+		4D19915A21269742003D59D0 /* YMAIChatQQ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAIChatQQ.m; sourceTree = "<group>"; };
+		4D19915C212697AC003D59D0 /* YMChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMChatViewController.h; sourceTree = "<group>"; };
+		4D19915D212697AC003D59D0 /* YMChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMChatViewController.m; sourceTree = "<group>"; };
+		4D22685720D20673006D54D1 /* tata_oc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tata_oc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D22685A20D20673006D54D1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4D22685B20D20673006D54D1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4D22685D20D20673006D54D1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4D22685E20D20673006D54D1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D22686120D20673006D54D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4D22686320D20675006D54D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D22686620D20675006D54D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D22686820D20675006D54D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D22686920D20675006D54D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4D22687320D2086A006D54D1 /* YMScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollViewController.h; sourceTree = "<group>"; };
+		4D22687420D2086A006D54D1 /* YMScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollViewController.m; sourceTree = "<group>"; };
+		4D39791A20DCA7B50035C478 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4D39791C20DCA7BD0035C478 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4D39791E20DCA7C60035C478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4D39792020DCA7CF0035C478 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4D39792220DCA7DB0035C478 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4D39792420DCA7F90035C478 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		4D39792620DCA8010035C478 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4D39792820DCA80B0035C478 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		4D39792A20DCA8150035C478 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4D39792C20DCA81E0035C478 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		4D39792E20DCA8260035C478 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4D39793020DCA82F0035C478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4D39793220DCA8390035C478 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		4D39793420DCAC5F0035C478 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
+		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
+		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
+		87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tata_oc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9707026339CD0FA9E3136A /* Pods-tata_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D22685420D20673006D54D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D39793520DCAC5F0035C478 /* libc++.tbd in Frameworks */,
+				4D39793320DCA8390035C478 /* VideoToolbox.framework in Frameworks */,
+				4D39793120DCA82F0035C478 /* UIKit.framework in Frameworks */,
+				4D39792F20DCA8260035C478 /* QuartzCore.framework in Frameworks */,
+				4D39792D20DCA81E0035C478 /* OpenGLES.framework in Frameworks */,
+				4D39792B20DCA8150035C478 /* MobileCoreServices.framework in Frameworks */,
+				4D39792920DCA80B0035C478 /* MediaPlayer.framework in Frameworks */,
+				4D39792720DCA8010035C478 /* libz.tbd in Frameworks */,
+				4D39792520DCA7F90035C478 /* libbz2.tbd in Frameworks */,
+				4D39792320DCA7DB0035C478 /* CoreVideo.framework in Frameworks */,
+				4D39792120DCA7CF0035C478 /* CoreMedia.framework in Frameworks */,
+				4D39791F20DCA7C60035C478 /* CoreGraphics.framework in Frameworks */,
+				4D39791D20DCA7BD0035C478 /* AVFoundation.framework in Frameworks */,
+				4D39791B20DCA7B50035C478 /* AudioToolbox.framework in Frameworks */,
+				1F0D8E8E5B1F5A892BB8D57A /* libPods-tata_oc.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D22684E20D20673006D54D1 = {
+			isa = PBXGroup;
+			children = (
+				4D22685920D20673006D54D1 /* tata_oc */,
+				4D22685820D20673006D54D1 /* Products */,
+				B5712375E0A6EBF36BB48D87 /* Pods */,
+				FC9ECB693AA42E6629000923 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4D22685820D20673006D54D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D22685720D20673006D54D1 /* tata_oc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D22685920D20673006D54D1 /* tata_oc */ = {
+			isa = PBXGroup;
+			children = (
+				4D2A9DE920E9F5DC00024B26 /* Asset */,
+				4DE46450212E596800E16AB0 /* Main */,
+				4DE4644F212E594200E16AB0 /* Model */,
+				4DE4644C212E587800E16AB0 /* View */,
+				4DE4644E212E588F00E16AB0 /* Controller */,
+				4DE4644D212E588000E16AB0 /* Utility */,
+			);
+			path = tata_oc;
+			sourceTree = "<group>";
+		};
+		4D2A9DE920E9F5DC00024B26 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				4D22686320D20675006D54D1 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
+		4DE4644C212E587800E16AB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DBAAB98212D75A600F340C3 /* YMScrollView.h */,
+				4DBAAB99212D75A600F340C3 /* YMScrollView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DE4644D212E588000E16AB0 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4D19915921269742003D59D0 /* YMAIChatQQ.h */,
+				4D19915A21269742003D59D0 /* YMAIChatQQ.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		4DE4644E212E588F00E16AB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D22687320D2086A006D54D1 /* YMScrollViewController.h */,
+				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
+				4D19915C212697AC003D59D0 /* YMChatViewController.h */,
+				4D19915D212697AC003D59D0 /* YMChatViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4DE4644F212E594200E16AB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DE46450212E596800E16AB0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4DE46451212E597400E16AB0 /* Config */,
+				4D22685A20D20673006D54D1 /* AppDelegate.h */,
+				4D22685B20D20673006D54D1 /* AppDelegate.m */,
+				4D22685D20D20673006D54D1 /* ViewController.h */,
+				4D22685E20D20673006D54D1 /* ViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4DE46451212E597400E16AB0 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4D22686020D20673006D54D1 /* Main.storyboard */,
+				4D22686520D20675006D54D1 /* LaunchScreen.storyboard */,
+				4D22686820D20675006D54D1 /* Info.plist */,
+				4D22686920D20675006D54D1 /* main.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		B5712375E0A6EBF36BB48D87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */,
+				EF9707026339CD0FA9E3136A /* Pods-tata_oc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC9ECB693AA42E6629000923 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D39793420DCAC5F0035C478 /* libc++.tbd */,
+				4D39793220DCA8390035C478 /* VideoToolbox.framework */,
+				4D39793020DCA82F0035C478 /* UIKit.framework */,
+				4D39792E20DCA8260035C478 /* QuartzCore.framework */,
+				4D39792C20DCA81E0035C478 /* OpenGLES.framework */,
+				4D39792A20DCA8150035C478 /* MobileCoreServices.framework */,
+				4D39792820DCA80B0035C478 /* MediaPlayer.framework */,
+				4D39792620DCA8010035C478 /* libz.tbd */,
+				4D39792420DCA7F90035C478 /* libbz2.tbd */,
+				4D39792220DCA7DB0035C478 /* CoreVideo.framework */,
+				4D39792020DCA7CF0035C478 /* CoreMedia.framework */,
+				4D39791E20DCA7C60035C478 /* CoreGraphics.framework */,
+				4D39791C20DCA7BD0035C478 /* AVFoundation.framework */,
+				4D39791A20DCA7B50035C478 /* AudioToolbox.framework */,
+				87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D22685620D20673006D54D1 /* tata_oc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D22686D20D20675006D54D1 /* Build configuration list for PBXNativeTarget "tata_oc" */;
+			buildPhases = (
+				896BFAF028BB420AD9538EDB /* [CP] Check Pods Manifest.lock */,
+				4D22685320D20673006D54D1 /* Sources */,
+				4D22685420D20673006D54D1 /* Frameworks */,
+				4D22685520D20673006D54D1 /* Resources */,
+				4D88DAD620FF27C000470445 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tata_oc;
+			productName = tata_oc;
+			productReference = 4D22685720D20673006D54D1 /* tata_oc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D22684F20D20673006D54D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = yongming;
+				TargetAttributes = {
+					4D22685620D20673006D54D1 = {
+						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 4D22685220D20673006D54D1 /* Build configuration list for PBXProject "tata_oc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D22684E20D20673006D54D1;
+			productRefGroup = 4D22685820D20673006D54D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D22685620D20673006D54D1 /* tata_oc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D22685520D20673006D54D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */,
+				4D22686420D20675006D54D1 /* Assets.xcassets in Resources */,
+				4D22686220D20673006D54D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		896BFAF028BB420AD9538EDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tata_oc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D22685320D20673006D54D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
+				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
+				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
+				4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */,
+				4D22686A20D20675006D54D1 /* main.m in Sources */,
+				4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */,
+				4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4D22686020D20673006D54D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D22686120D20673006D54D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4D22686520D20675006D54D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4D22686620D20675006D54D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4D22686B20D20675006D54D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4D22686C20D20675006D54D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D22686E20D20675006D54D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9RH92V4S6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tata_oc/SDK/IJK",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D22686F20D20675006D54D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF9707026339CD0FA9E3136A /* Pods-tata_oc.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X9RH92V4S6;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/tata_oc/SDK/IJK",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D22685220D20673006D54D1 /* Build configuration list for PBXProject "tata_oc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D22686B20D20675006D54D1 /* Debug */,
+				4D22686C20D20675006D54D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D22686D20D20675006D54D1 /* Build configuration list for PBXNativeTarget "tata_oc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D22686E20D20675006D54D1 /* Debug */,
+				4D22686F20D20675006D54D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4D22684F20D20673006D54D1 /* Project object */;
+}
