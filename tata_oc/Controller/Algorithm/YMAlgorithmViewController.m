@@ -1,25 +1,23 @@
 //
-//  ViewController.m
+//  YMAlgorithmViewController.m
 //  tata_oc
 //
-//  Created by yongming on 2018/6/14.
+//  Created by yongming on 2018/8/30.
 //  Copyright © 2018 yongming. All rights reserved.
 //
 
-#import "ViewController.h"
-#import <Masonry.h>
+#import "YMAlgorithmViewController.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface YMAlgorithmViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* dataSources;
 @end
 
-@implementation ViewController
+@implementation YMAlgorithmViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"YM-Demo";
     // Do any additional setup after loading the view, typically from a nib.
     UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview:tableView];
@@ -31,12 +29,8 @@
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    tableView.tableFooterView = [UIView new];
     
-    self.dataSources = @[@{@"cls":@"YMAlgorithmViewController",@"desc":@"算法测试"},
-                         @{@"cls":@"YMScrollViewController",@"desc":@"UIScrollView多滑动测试"},
-                         @{@"cls":@"YMChatViewController",@"desc":@"QQ闲聊SDK"},
-                         @{@"cls":@"YMCommonViewController",@"desc":@"其它测试"}];
+    self.dataSources = @[@{@"cls":@"YMBinaryTreeViewController",@"desc":@"生成二叉树"}];
 }
 
 #pragma mark - UITableView
@@ -55,11 +49,9 @@
     
     NSDictionary* data = [self.dataSources objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = data[@"desc"];
-    
     cell.detailTextLabel.text = [NSString stringWithFormat:@"class:%@", data[@"cls"]];
     cell.detailTextLabel.textColor = [UIColor lightGrayColor];
-    
+    cell.textLabel.text = data[@"desc"];
     return cell;
 }
 
@@ -70,7 +62,7 @@
     NSDictionary* data = [self.dataSources objectAtIndex:indexPath.row];
     
     Class vcCLS = NSClassFromString(data[@"cls"]);
-
+    
     UIViewController* vc = [[vcCLS alloc] init];
     vc.title = data[@"desc"];
     vc.edgesForExtendedLayout = UIRectEdgeNone;

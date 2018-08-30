@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1F0D8E8E5B1F5A892BB8D57A /* libPods-tata_oc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */; };
+		4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFAA2137C14C0063D556 /* YMAlgorithmViewController.m */; };
+		4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFAF2137CD370063D556 /* YMBinaryTreeViewController.m */; };
+		4D0EBFB32137CE5D0063D556 /* YMAlgorithmDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB22137CE5D0063D556 /* YMAlgorithmDrawView.m */; };
+		4D0EBFB72137DB8B0063D556 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB62137DB8B0063D556 /* UIColor+Util.m */; };
+		4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB92137E2120063D556 /* YMDrawUtil.m */; };
 		4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915A21269742003D59D0 /* YMAIChatQQ.m */; };
 		4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915D212697AC003D59D0 /* YMChatViewController.m */; };
 		4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22685B20D20673006D54D1 /* AppDelegate.m */; };
@@ -31,6 +36,8 @@
 		4D39793120DCA82F0035C478 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793020DCA82F0035C478 /* UIKit.framework */; };
 		4D39793320DCA8390035C478 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793220DCA8390035C478 /* VideoToolbox.framework */; };
 		4D39793520DCAC5F0035C478 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793420DCAC5F0035C478 /* libc++.tbd */; };
+		4D7AEC6B2136462400043593 /* YMAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AEC6A2136462400043593 /* YMAlgorithm.m */; };
+		4D7AEC6E2136464600043593 /* YMCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AEC6D2136464600043593 /* YMCommonViewController.m */; };
 		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +55,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D0EBFA92137C14C0063D556 /* YMAlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAlgorithmViewController.h; sourceTree = "<group>"; };
+		4D0EBFAA2137C14C0063D556 /* YMAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlgorithmViewController.m; sourceTree = "<group>"; };
+		4D0EBFAE2137CD370063D556 /* YMBinaryTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBinaryTreeViewController.h; sourceTree = "<group>"; };
+		4D0EBFAF2137CD370063D556 /* YMBinaryTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBinaryTreeViewController.m; sourceTree = "<group>"; };
+		4D0EBFB12137CE5D0063D556 /* YMAlgorithmDrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAlgorithmDrawView.h; sourceTree = "<group>"; };
+		4D0EBFB22137CE5D0063D556 /* YMAlgorithmDrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlgorithmDrawView.m; sourceTree = "<group>"; };
+		4D0EBFB52137DB8B0063D556 /* UIColor+Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
+		4D0EBFB62137DB8B0063D556 /* UIColor+Util.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
+		4D0EBFB82137E2120063D556 /* YMDrawUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDrawUtil.h; sourceTree = "<group>"; };
+		4D0EBFB92137E2120063D556 /* YMDrawUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDrawUtil.m; sourceTree = "<group>"; };
 		4D19915921269742003D59D0 /* YMAIChatQQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAIChatQQ.h; sourceTree = "<group>"; };
 		4D19915A21269742003D59D0 /* YMAIChatQQ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAIChatQQ.m; sourceTree = "<group>"; };
 		4D19915C212697AC003D59D0 /* YMChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMChatViewController.h; sourceTree = "<group>"; };
@@ -78,6 +95,12 @@
 		4D39793020DCA82F0035C478 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4D39793220DCA8390035C478 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		4D39793420DCAC5F0035C478 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4D7AEC68213645D900043593 /* YMProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMProtocol.h; sourceTree = "<group>"; };
+		4D7AEC692136462400043593 /* YMAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAlgorithm.h; sourceTree = "<group>"; };
+		4D7AEC6A2136462400043593 /* YMAlgorithm.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlgorithm.m; sourceTree = "<group>"; };
+		4D7AEC6C2136464600043593 /* YMCommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonViewController.h; sourceTree = "<group>"; };
+		4D7AEC6D2136464600043593 /* YMCommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCommonViewController.m; sourceTree = "<group>"; };
+		4D7AEC7121364A7200043593 /* YMHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHeader.pch; sourceTree = "<group>"; };
 		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
 		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
 		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +134,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0EBFAD2137CCBA0063D556 /* Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				4D0EBFA92137C14C0063D556 /* YMAlgorithmViewController.h */,
+				4D0EBFAA2137C14C0063D556 /* YMAlgorithmViewController.m */,
+				4D0EBFAE2137CD370063D556 /* YMBinaryTreeViewController.h */,
+				4D0EBFAF2137CD370063D556 /* YMBinaryTreeViewController.m */,
+			);
+			path = Algorithm;
+			sourceTree = "<group>";
+		};
+		4D0EBFB42137DB760063D556 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4D0EBFB52137DB8B0063D556 /* UIColor+Util.h */,
+				4D0EBFB62137DB8B0063D556 /* UIColor+Util.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		4D22684E20D20673006D54D1 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +175,7 @@
 		4D22685920D20673006D54D1 /* tata_oc */ = {
 			isa = PBXGroup;
 			children = (
+				4D7AEC67213645A800043593 /* Public */,
 				4D2A9DE920E9F5DC00024B26 /* Asset */,
 				4DE46450212E596800E16AB0 /* Main */,
 				4DE4644F212E594200E16AB0 /* Model */,
@@ -150,11 +194,22 @@
 			path = Asset;
 			sourceTree = "<group>";
 		};
+		4D7AEC67213645A800043593 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				4D7AEC7121364A7200043593 /* YMHeader.pch */,
+				4D7AEC68213645D900043593 /* YMProtocol.h */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		4DE4644C212E587800E16AB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				4DBAAB98212D75A600F340C3 /* YMScrollView.h */,
 				4DBAAB99212D75A600F340C3 /* YMScrollView.m */,
+				4D0EBFB12137CE5D0063D556 /* YMAlgorithmDrawView.h */,
+				4D0EBFB22137CE5D0063D556 /* YMAlgorithmDrawView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,8 +217,13 @@
 		4DE4644D212E588000E16AB0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				4D0EBFB42137DB760063D556 /* Category */,
 				4D19915921269742003D59D0 /* YMAIChatQQ.h */,
 				4D19915A21269742003D59D0 /* YMAIChatQQ.m */,
+				4D7AEC692136462400043593 /* YMAlgorithm.h */,
+				4D7AEC6A2136462400043593 /* YMAlgorithm.m */,
+				4D0EBFB82137E2120063D556 /* YMDrawUtil.h */,
+				4D0EBFB92137E2120063D556 /* YMDrawUtil.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -175,6 +235,9 @@
 				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
 				4D19915C212697AC003D59D0 /* YMChatViewController.h */,
 				4D19915D212697AC003D59D0 /* YMChatViewController.m */,
+				4D7AEC6C2136464600043593 /* YMCommonViewController.h */,
+				4D7AEC6D2136464600043593 /* YMCommonViewController.m */,
+				4D0EBFAD2137CCBA0063D556 /* Algorithm */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -340,11 +403,18 @@
 			files = (
 				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
+				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
+				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */,
 				4D22686A20D20675006D54D1 /* main.m in Sources */,
+				4D7AEC6E2136464600043593 /* YMCommonViewController.m in Sources */,
+				4D0EBFB72137DB8B0063D556 /* UIColor+Util.m in Sources */,
+				4D7AEC6B2136462400043593 /* YMAlgorithm.m in Sources */,
 				4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */,
+				4D0EBFB32137CE5D0063D556 /* YMAlgorithmDrawView.m in Sources */,
 				4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */,
+				4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,19 +558,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9RH92V4S6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tata_oc/SDK/IJK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = (
+					"-Wno-deprecated-declarations",
+					"-Wno-strict-prototypes",
+					"-Wno-missing-declarations",
+					"-Wno-deprecated-implementations",
+					"-Wno-unknown-warning-option",
+					"-Wno-receiver-is-weak",
+					"-Wunguarded-availability",
+				);
 			};
 			name = Debug;
 		};
@@ -512,19 +589,26 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X9RH92V4S6;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/tata_oc/SDK/IJK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = (
+					"-Wno-deprecated-declarations",
+					"-Wno-strict-prototypes",
+					"-Wno-missing-declarations",
+					"-Wno-deprecated-implementations",
+					"-Wno-unknown-warning-option",
+					"-Wno-receiver-is-weak",
+					"-Wunguarded-availability",
+				);
 			};
 			name = Release;
 		};
