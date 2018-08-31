@@ -37,7 +37,7 @@
     txt.placeholder = @"说点什么...";
     [txt mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(6);
-        make.top.mas_equalTo(84);
+        make.top.mas_equalTo(6);
         make.right.equalTo(self.view).offset(-6);
         make.height.mas_equalTo(30);
     }];
@@ -110,9 +110,6 @@
     return self.chats.count;
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -121,20 +118,5 @@
     cell.textLabel.textColor = model.isMe ? [UIColor blueColor] : [UIColor orangeColor];
     return cell;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

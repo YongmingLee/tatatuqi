@@ -1,26 +1,23 @@
 //
-//  YMCommonViewController.m
+//  YMRBTreeViewController.m
 //  tata_oc
 //
-//  Created by yongming on 2018/8/29.
+//  Created by yongming on 2018/8/30.
 //  Copyright © 2018 yongming. All rights reserved.
 //
 
-#import "YMCommonViewController.h"
-#import "YMAlgorithm.h"
+#import "YMRBTreeViewController.h"
 
-@interface YMCommonViewController ()
-
+@interface YMRBTreeViewController ()
 
 @end
 
-@implementation YMCommonViewController
+@implementation YMRBTreeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    
 }
 
 @end

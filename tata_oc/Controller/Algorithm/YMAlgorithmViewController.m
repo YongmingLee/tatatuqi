@@ -30,7 +30,8 @@
         make.edges.equalTo(self.view);
     }];
     
-    self.dataSources = @[@{@"cls":@"YMBinaryTreeViewController",@"desc":@"生成二叉树"}];
+    self.dataSources = @[@{@"cls":@"YMBinaryTreeViewController",@"desc":@"生成二叉树"},
+                         @{@"cls":@"YMRBTreeViewController",@"desc":@"红黑树"}];
 }
 
 #pragma mark - UITableView
