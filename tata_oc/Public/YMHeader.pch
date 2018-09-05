@@ -10,5 +10,6 @@
     #import <Masonry/Masonry.h>
     #import "YMProtocol.h"
     #import "UIColor+Util.h"
+    #import "YMAlgorithm.h"
 #endif
 

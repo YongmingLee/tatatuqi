@@ -17,9 +17,38 @@ typedef struct _YMABinaryTree
     
 } YMABinaryTree;
 
+
+/**
+ 算法
+ */
 @interface YMAlgorithm : NSObject
 
+
+/**
+ 生成全二叉树
+
+ @param level 层级数
+ @param node 初始节点
+ */
 - (void)walkBinaryTree:(int)level node:(YMABinaryTree*)node;
+
+
+/**
+ 释放二叉树
+
+ @param node 初始节点
+ */
 - (void)releaseBinaryTree:(YMABinaryTree*)node;
+
+
+
+
+/**
+ 翻转字符串
+
+ @param sourceString 源字符串
+ @return 经过翻转的字符串
+ */
+- (NSString*)reverseString:(NSString*)sourceString;
 
 @end

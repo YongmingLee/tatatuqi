@@ -8,7 +8,6 @@
 
 #import "YMAlgorithmDrawView.h"
 #import "YMDrawUtil.h"
-#import "YMAlgorithm.h"
 
 @interface YMAlgorithmDrawView()
 {
@@ -48,7 +47,7 @@
                     binaryTree->centerPt = CGPointMake(bounds.size.width*.5, 5);
                     binaryTree->rect = CGRectMake(binaryTree->centerPt.x-5, binaryTree->centerPt.y-5, 10, 10);
                     
-                    [self.algo walkBinaryTree:10 node:binaryTree];
+                    [self.algo walkBinaryTree:12 node:binaryTree];
                 }
                 break;
                 

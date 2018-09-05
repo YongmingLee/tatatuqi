@@ -31,7 +31,8 @@
     }];
     
     self.dataSources = @[@{@"cls":@"YMBinaryTreeViewController",@"desc":@"生成二叉树"},
-                         @{@"cls":@"YMRBTreeViewController",@"desc":@"红黑树"}];
+                         @{@"cls":@"YMRBTreeViewController",@"desc":@"红黑树"},
+                         @{@"cls":@"YMNormalAlgorithmViewController",@"desc":@"普通算法"}];
 }
 
 #pragma mark - UITableView

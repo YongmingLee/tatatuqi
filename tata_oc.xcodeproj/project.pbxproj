@@ -39,6 +39,7 @@
 		4D39793520DCAC5F0035C478 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39793420DCAC5F0035C478 /* libc++.tbd */; };
 		4D7AEC6B2136462400043593 /* YMAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AEC6A2136462400043593 /* YMAlgorithm.m */; };
 		4D7AEC6E2136464600043593 /* YMCommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D7AEC6D2136464600043593 /* YMCommonViewController.m */; };
+		4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */; };
 		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,8 @@
 		4D7AEC6C2136464600043593 /* YMCommonViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCommonViewController.h; sourceTree = "<group>"; };
 		4D7AEC6D2136464600043593 /* YMCommonViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCommonViewController.m; sourceTree = "<group>"; };
 		4D7AEC7121364A7200043593 /* YMHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMHeader.pch; sourceTree = "<group>"; };
+		4DA1D829213F8778006B7683 /* YMNormalAlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNormalAlgorithmViewController.h; sourceTree = "<group>"; };
+		4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNormalAlgorithmViewController.m; sourceTree = "<group>"; };
 		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
 		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
 		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				4D0EBFAF2137CD370063D556 /* YMBinaryTreeViewController.m */,
 				4D0EBFBB2137F87C0063D556 /* YMRBTreeViewController.h */,
 				4D0EBFBC2137F87C0063D556 /* YMRBTreeViewController.m */,
+				4DA1D829213F8778006B7683 /* YMNormalAlgorithmViewController.h */,
+				4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */,
 			);
 			path = Algorithm;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
+				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
 				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,

@@ -7,7 +7,6 @@
 //
 
 #import "YMCommonViewController.h"
-#import "YMAlgorithm.h"
 
 @interface YMCommonViewController ()
 

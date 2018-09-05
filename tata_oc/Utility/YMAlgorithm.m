@@ -50,4 +50,22 @@ static CGFloat RADIUS = 5;
     }
 }
 
+- (NSString*)reverseString:(NSString *)sourceString
+{
+    // 二分
+    NSMutableString* tmp = [NSMutableString stringWithString:sourceString];
+    for (int i = 0; i < tmp.length / 2; i ++) {
+        NSRange src = NSMakeRange(i, 1);
+        NSRange target = NSMakeRange(tmp.length - i - 1, 1);
+        
+        NSString* srcString = [tmp substringWithRange:src];
+        NSString* targetString = [tmp substringWithRange:target];
+        
+        [tmp replaceCharactersInRange:src withString:targetString];
+        [tmp replaceCharactersInRange:target withString:srcString];
+    }
+    
+    return tmp;
+}
+
 @end
