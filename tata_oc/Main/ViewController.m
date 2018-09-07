@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"YM-Demo";
+    self.title = @"-*YM三体*-";
     // Do any additional setup after loading the view, typically from a nib.
     UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview:tableView];
@@ -33,10 +33,12 @@
     }];
     tableView.tableFooterView = [UIView new];
     
-    self.dataSources = @[@{@"cls":@"YMAlgorithmViewController",@"desc":@"算法测试"},
-                         @{@"cls":@"YMScrollViewController",@"desc":@"UIScrollView多滑动测试"},
-                         @{@"cls":@"YMChatViewController",@"desc":@"QQ闲聊SDK"},
-                         @{@"cls":@"YMCommonViewController",@"desc":@"其它测试"}];
+    self.dataSources = @[@{@"cls":@"YMAlgorithmViewController",@"desc":@"算法"},
+                         @{@"cls":@"YMMathsViewController",@"desc":@"数学"},
+                         @{@"cls":@"YMPhysicsViewController",@"desc":@"物理"},
+                         @{@"cls":@"YMUIViewController",@"desc":@"用户交互"},
+                         @{@"cls":@"YMThirdPartyViewController",@"desc":@"第三方"},
+                         @{@"cls":@"YMCommonViewController",@"desc":@"基础"}];
 }
 
 #pragma mark - UITableView
@@ -51,6 +53,7 @@
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"testcell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"testcell"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
     NSDictionary* data = [self.dataSources objectAtIndex:indexPath.row];
@@ -75,6 +78,10 @@
     vc.title = data[@"desc"];
     vc.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController pushViewController:vc animated:YES];
+    
+    
+    self.navigationController.navigationBar.tintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
 }
 
 @end

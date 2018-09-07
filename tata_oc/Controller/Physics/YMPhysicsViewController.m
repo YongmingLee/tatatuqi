@@ -1,19 +1,19 @@
 //
-//  YMAlgorithmViewController.m
+//  YMPhysicsViewController.m
 //  tata_oc
 //
-//  Created by yongming on 2018/8/30.
-//  Copyright © 2018 yongming. All rights reserved.
+//  Created by yongming on 2018/9/7.
+//  Copyright © 2018年 yongming. All rights reserved.
 //
 
-#import "YMAlgorithmViewController.h"
+#import "YMPhysicsViewController.h"
 
-@interface YMAlgorithmViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface YMPhysicsViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView* tableView;
 @property (nonatomic, strong) NSArray* dataSources;
 @end
 
-@implementation YMAlgorithmViewController
+@implementation YMPhysicsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,9 +30,7 @@
         make.edges.equalTo(self.view);
     }];
     
-    self.dataSources = @[@{@"cls":@"YMBinaryTreeViewController",@"desc":@"生成二叉树"},
-                         @{@"cls":@"YMRBTreeViewController",@"desc":@"红黑树"},
-                         @{@"cls":@"YMNormalAlgorithmViewController",@"desc":@"普通算法"}];
+    self.dataSources = @[@{@"cls":@"YMChatViewController",@"desc":@"量子物理"}];
 }
 
 #pragma mark - UITableView
