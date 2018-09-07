@@ -45,6 +45,7 @@
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
 		4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122272142292300BC3FED /* YMThirdPartyViewController.m */; };
 		4DE1222B2142299200BC3FED /* YMUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1222A2142299200BC3FED /* YMUIViewController.m */; };
+		4DE1222F2142311D00BC3FED /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686820D20675006D54D1 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -197,13 +198,20 @@
 		4D22685920D20673006D54D1 /* tata_oc */ = {
 			isa = PBXGroup;
 			children = (
+				4D22685A20D20673006D54D1 /* AppDelegate.h */,
+				4D22685B20D20673006D54D1 /* AppDelegate.m */,
+				4D22685D20D20673006D54D1 /* ViewController.h */,
+				4D22685E20D20673006D54D1 /* ViewController.m */,
+				4D22686020D20673006D54D1 /* Main.storyboard */,
+				4D22686520D20675006D54D1 /* LaunchScreen.storyboard */,
+				4D22686820D20675006D54D1 /* Info.plist */,
+				4D22686920D20675006D54D1 /* main.m */,
 				4D7AEC67213645A800043593 /* Public */,
-				4D2A9DE920E9F5DC00024B26 /* Asset */,
-				4DE46450212E596800E16AB0 /* Main */,
+				4DE4644E212E588F00E16AB0 /* Controller */,
 				4DE4644F212E594200E16AB0 /* Model */,
 				4DE4644C212E587800E16AB0 /* View */,
-				4DE4644E212E588F00E16AB0 /* Controller */,
 				4DE4644D212E588000E16AB0 /* Utility */,
+				4D2A9DE920E9F5DC00024B26 /* Asset */,
 			);
 			path = tata_oc;
 			sourceTree = "<group>";
@@ -243,6 +251,37 @@
 			path = Maths;
 			sourceTree = "<group>";
 		};
+		4DE1222C21422CB600BC3FED /* UIInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				4D22687320D2086A006D54D1 /* YMScrollViewController.h */,
+				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
+				4DE122292142299200BC3FED /* YMUIViewController.h */,
+				4DE1222A2142299200BC3FED /* YMUIViewController.m */,
+			);
+			path = UIInteraction;
+			sourceTree = "<group>";
+		};
+		4DE1222D21422CF100BC3FED /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				4D19915C212697AC003D59D0 /* YMChatViewController.h */,
+				4D19915D212697AC003D59D0 /* YMChatViewController.m */,
+				4DE122262142292300BC3FED /* YMThirdPartyViewController.h */,
+				4DE122272142292300BC3FED /* YMThirdPartyViewController.m */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		4DE1222E21422D1E00BC3FED /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				4D7AEC6C2136464600043593 /* YMCommonViewController.h */,
+				4D7AEC6D2136464600043593 /* YMCommonViewController.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
 		4DE4644C212E587800E16AB0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,19 +310,12 @@
 		4DE4644E212E588F00E16AB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D22687320D2086A006D54D1 /* YMScrollViewController.h */,
-				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
-				4D19915C212697AC003D59D0 /* YMChatViewController.h */,
-				4D19915D212697AC003D59D0 /* YMChatViewController.m */,
-				4D7AEC6C2136464600043593 /* YMCommonViewController.h */,
-				4D7AEC6D2136464600043593 /* YMCommonViewController.m */,
 				4DE122222142273D00BC3FED /* Maths */,
 				4DE122212142273400BC3FED /* Physics */,
 				4D0EBFAD2137CCBA0063D556 /* Algorithm */,
-				4DE122262142292300BC3FED /* YMThirdPartyViewController.h */,
-				4DE122272142292300BC3FED /* YMThirdPartyViewController.m */,
-				4DE122292142299200BC3FED /* YMUIViewController.h */,
-				4DE1222A2142299200BC3FED /* YMUIViewController.m */,
+				4DE1222D21422CF100BC3FED /* ThirdParty */,
+				4DE1222C21422CB600BC3FED /* UIInteraction */,
+				4DE1222E21422D1E00BC3FED /* Foundation */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -293,29 +325,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		4DE46450212E596800E16AB0 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				4DE46451212E597400E16AB0 /* Config */,
-				4D22685A20D20673006D54D1 /* AppDelegate.h */,
-				4D22685B20D20673006D54D1 /* AppDelegate.m */,
-				4D22685D20D20673006D54D1 /* ViewController.h */,
-				4D22685E20D20673006D54D1 /* ViewController.m */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		4DE46451212E597400E16AB0 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				4D22686020D20673006D54D1 /* Main.storyboard */,
-				4D22686520D20675006D54D1 /* LaunchScreen.storyboard */,
-				4D22686820D20675006D54D1 /* Info.plist */,
-				4D22686920D20675006D54D1 /* main.m */,
-			);
-			path = Config;
 			sourceTree = "<group>";
 		};
 		B5712375E0A6EBF36BB48D87 /* Pods */ = {
@@ -414,6 +423,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DE1222F2142311D00BC3FED /* Info.plist in Resources */,
 				4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */,
 				4D22686420D20675006D54D1 /* Assets.xcassets in Resources */,
 				4D22686220D20673006D54D1 /* Main.storyboard in Resources */,
@@ -613,7 +623,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,7 +654,7 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
-				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Main/Config/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

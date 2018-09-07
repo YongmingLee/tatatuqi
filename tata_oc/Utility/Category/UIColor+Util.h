@@ -17,4 +17,5 @@
  @return color
  */
 + (UIColor*)randomColor;
+
 @end
