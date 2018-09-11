@@ -14,6 +14,7 @@
 		4D0EBFB72137DB8B0063D556 /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB62137DB8B0063D556 /* UIColor+Util.m */; };
 		4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB92137E2120063D556 /* YMDrawUtil.m */; };
 		4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFBC2137F87C0063D556 /* YMRBTreeViewController.m */; };
+		4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */; };
 		4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915A21269742003D59D0 /* YMAIChatQQ.m */; };
 		4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D19915D212697AC003D59D0 /* YMChatViewController.m */; };
 		4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22685B20D20673006D54D1 /* AppDelegate.m */; };
@@ -74,6 +75,8 @@
 		4D0EBFB92137E2120063D556 /* YMDrawUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMDrawUtil.m; sourceTree = "<group>"; };
 		4D0EBFBB2137F87C0063D556 /* YMRBTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMRBTreeViewController.h; sourceTree = "<group>"; };
 		4D0EBFBC2137F87C0063D556 /* YMRBTreeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMRBTreeViewController.m; sourceTree = "<group>"; };
+		4D15ADF12147891900B36D0C /* YMSafeAreaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSafeAreaViewController.h; sourceTree = "<group>"; };
+		4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSafeAreaViewController.m; sourceTree = "<group>"; };
 		4D19915921269742003D59D0 /* YMAIChatQQ.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAIChatQQ.h; sourceTree = "<group>"; };
 		4D19915A21269742003D59D0 /* YMAIChatQQ.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAIChatQQ.m; sourceTree = "<group>"; };
 		4D19915C212697AC003D59D0 /* YMChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMChatViewController.h; sourceTree = "<group>"; };
@@ -254,10 +257,12 @@
 		4DE1222C21422CB600BC3FED /* UIInteraction */ = {
 			isa = PBXGroup;
 			children = (
-				4D22687320D2086A006D54D1 /* YMScrollViewController.h */,
-				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
 				4DE122292142299200BC3FED /* YMUIViewController.h */,
 				4DE1222A2142299200BC3FED /* YMUIViewController.m */,
+				4D22687320D2086A006D54D1 /* YMScrollViewController.h */,
+				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
+				4D15ADF12147891900B36D0C /* YMSafeAreaViewController.h */,
+				4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */,
 			);
 			path = UIInteraction;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
+				4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */,
 				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
 				4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */,
 				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
