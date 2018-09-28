@@ -20,6 +20,8 @@ typedef void (^TestBlock)(int);
 @property (nonatomic, copy) NSArray* copydArray;
 
 @property (nonatomic, strong) NSTimer* scrollTimer;
+@property (nonatomic, strong) dispatch_semaphore_t sem;
+@property (nonatomic, strong) dispatch_queue_t testQueue;
 
 @end
 
@@ -35,12 +37,7 @@ typedef void (^TestBlock)(int);
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    
-    
 }
-
-
 
 /**
  当strong，copy 赋值不是可变类型，结果是一致的。反之，strong是指针引用，copy是新申请内存。
@@ -136,6 +133,76 @@ typedef void (^TestBlock)(int);
 - (void)scrollTimerHandler
 {
     NSLog(@"scroll timer alive ...");
+}
+
+/**
+ Semaphore: 控制同时访问临界区的个数
+ */
+- (void)testSemaphore
+{
+    self.sem = dispatch_semaphore_create(1);
+    
+    for (int i = 0; i < 50; i ++) {
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            dispatch_semaphore_wait(self.sem, DISPATCH_TIME_FOREVER);
+            
+            NSLog(@"item-%00004d", i);
+            
+            dispatch_semaphore_signal(self.sem);
+        });
+    }
+}
+
+
+/**
+  打印数字内的所有质数
+
+ @param n 测试数字
+ */
+- (void)testPrime:(NSInteger)n
+{
+    NSInteger i = 2;
+    while (i < n) {
+        
+        NSInteger j = 2;
+        while (j < i) {
+            if (i%j == 0) {
+                break;
+            }
+            j ++;
+        }
+        
+        if (j == i) {
+            NSLog(@"质数是:%ld", i);
+        }
+        
+        i ++;
+    }
+}
+
+/**
+ 测试队列调用
+ */
+- (void)testQueueCall
+{
+    self.testQueue = dispatch_queue_create("com.qq.asdf", DISPATCH_QUEUE_CONCURRENT);
+    
+    for (int i = 0; i < 50; i ++) {
+        dispatch_async(self.testQueue, ^{
+            
+            NSLog(@"item1:%d", (int)i);
+        });
+    }
+    
+    
+    for (int i = 0; i < 50; i ++) {
+        dispatch_async(self.testQueue, ^{
+            
+            NSLog(@"item2:%d", (int)i);
+        });
+    }
 }
 
 @end

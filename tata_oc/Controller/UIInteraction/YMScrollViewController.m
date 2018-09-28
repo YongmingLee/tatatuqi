@@ -10,6 +10,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import <Masonry/Masonry.h>
 #import "YMScrollView.h"
+#import "JLAnchorPageScrollViewAgent.h"
+#import "YMLeftTableViewController.h"
+#import "YMRightTableViewController.h"
 
 @interface YMScrollViewController () <UIScrollViewDelegate>
 {
@@ -20,6 +23,9 @@
 @property (nonatomic, strong) UIScrollView* containerView;
 @property (nonatomic, strong) UIScrollView* leftView;
 @property (nonatomic, strong) UIScrollView* rightView;
+@property (nonatomic, strong) JLAnchorPageScrollViewAgent* scrollAgent;
+@property (nonatomic, strong) YMLeftTableViewController* lViewVC;
+@property (nonatomic, strong) YMRightTableViewController* rViewVC;
 
 @end
 
@@ -31,9 +37,37 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
  
-    [self testViewLayout];
+    [self testIntegrate];
 }
 
+- (void)testIntegrate
+{
+    self.scrollAgent = [[JLAnchorPageScrollViewAgent alloc] init];
+    
+    self.lViewVC = [[YMLeftTableViewController alloc] init];
+    self.rViewVC = [[YMRightTableViewController alloc] init];
+    
+    CGFloat headerHeight = [UIScreen mainScreen].bounds.size.width + 155;
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, headerHeight)];
+    headerView.backgroundColor = [UIColor redColor];
+    
+    [self addChildViewController:self.lViewVC];
+    [self addChildViewController:self.rViewVC];
+    
+    self.scrollAgent.leftVC = self.lViewVC;
+    self.scrollAgent.rightVC = self.rViewVC;
+    
+    [self.scrollAgent setupAgent:self.view
+                        leftView:self.lViewVC.tableView
+                       rightView:self.rViewVC.tableView
+                      headerView:headerView
+                    headerHeight:headerHeight];
+}
+
+
+/**
+ 测试多ScrollView联动
+ */
 - (void)testViewLayout
 {
     self.edgesForExtendedLayout = UIRectEdgeNone;

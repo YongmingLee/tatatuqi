@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"-*YM三体*-";
+    self.title = @"Demo";
     // Do any additional setup after loading the view, typically from a nib.
     UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview:tableView];
