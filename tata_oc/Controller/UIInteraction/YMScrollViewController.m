@@ -37,9 +37,67 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
  
-    [self testIntegrate];
+    [self testAutoScrollView];
+//    [self testIntegrate];
 }
 
+
+/**
+ 通过约束实现scroll布局
+ */
+- (void)testAutoScrollView
+{
+    UIScrollView* scroll = [UIScrollView new];
+    scroll.pagingEnabled = YES;
+    [self.view addSubview:scroll];
+    
+    UIView* container = [UIView new];
+    [scroll addSubview:container];
+    
+    UIView* left = [UIView new];
+    [container addSubview:left];
+    
+    UIView* right = [UIView new];
+    [container addSubview:right];
+    
+    [scroll mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(10);
+        make.top.mas_equalTo(104);
+        make.right.mas_equalTo(-10);
+        make.bottom.mas_equalTo(-90);
+    }];
+    
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(scroll);
+        make.height.equalTo(scroll);
+    }];
+    
+    [left mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.top.bottom.equalTo(container);
+        make.width.equalTo(scroll);
+    }];
+    
+    [right mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(left.mas_right);
+        make.top.bottom.equalTo(container);
+        make.width.equalTo(scroll);
+    }];
+    
+    [container mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.equalTo(right.mas_right);
+    }];
+    
+    scroll.backgroundColor = [UIColor redColor];
+    container.backgroundColor = [UIColor yellowColor];
+    left.backgroundColor = [UIColor greenColor];
+    right.backgroundColor = [UIColor cyanColor];
+}
+
+
+/**
+ 联动scrollview测试
+ */
 - (void)testIntegrate
 {
     self.scrollAgent = [[JLAnchorPageScrollViewAgent alloc] init];

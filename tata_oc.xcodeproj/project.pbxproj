@@ -46,6 +46,7 @@
 		4D8F5CF3215B3703005B855E /* YMFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F5CF2215B3703005B855E /* YMFunc.m */; };
 		4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */; };
 		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
+		4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD81E012181705400C3011B /* YMAnimationViewController.m */; };
 		4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1221F2142271B00BC3FED /* YMPhysicsViewController.m */; };
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
 		4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122272142292300BC3FED /* YMThirdPartyViewController.m */; };
@@ -129,6 +130,8 @@
 		4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNormalAlgorithmViewController.m; sourceTree = "<group>"; };
 		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
 		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
+		4DD81E002181705400C3011B /* YMAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAnimationViewController.h; sourceTree = "<group>"; };
+		4DD81E012181705400C3011B /* YMAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAnimationViewController.m; sourceTree = "<group>"; };
 		4DE1221E2142271B00BC3FED /* YMPhysicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPhysicsViewController.h; sourceTree = "<group>"; };
 		4DE1221F2142271B00BC3FED /* YMPhysicsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMPhysicsViewController.m; sourceTree = "<group>"; };
 		4DE122232142275400BC3FED /* YMMathsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMMathsViewController.h; sourceTree = "<group>"; };
@@ -290,6 +293,8 @@
 				4D22687420D2086A006D54D1 /* YMScrollViewController.m */,
 				4D15ADF12147891900B36D0C /* YMSafeAreaViewController.h */,
 				4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */,
+				4DD81E002181705400C3011B /* YMAnimationViewController.h */,
+				4DD81E012181705400C3011B /* YMAnimationViewController.m */,
 			);
 			path = UIInteraction;
 			sourceTree = "<group>";
@@ -482,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /usr/bin/python;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nstr = '/Users/yongming/Downloads/xcode_log1'\nfh = open(str, 'a+')\nfh.write('123456')\nfh.close()\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#str = '/Users/yongming/Downloads/xcode_log1'\n#fh = open(str, 'a+')\n#fh.write('123456')\n#fh.close()\n";
 		};
 		896BFAF028BB420AD9538EDB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -518,6 +523,7 @@
 				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
 				4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */,
 				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
+				4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,
 				4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */,

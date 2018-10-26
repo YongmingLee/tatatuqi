@@ -19,14 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    dispatch_queue_t main_queue = dispatch_get_main_queue();
-//    dispatch_sync(main_queue
-//                  , ^{
-//                      NSLog(@"main queue");
-//                  });
-//    
-//    NSLog(@"go on");
-    
     return YES;
 }
 
