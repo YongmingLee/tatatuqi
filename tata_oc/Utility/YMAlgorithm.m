@@ -68,4 +68,60 @@ static CGFloat RADIUS = 5;
     return tmp;
 }
 
+/**
+ 交换字符串两个索引的值
+
+ @param sourceString 源字符串
+ @param srcIndex 源索引
+ @param tarIndex 目标索引
+ */
+- (void)exchangeStringIndex:(NSMutableString*)sourceString srcIndex:(NSInteger)srcIndex tarIndex:(NSInteger)tarIndex
+{
+    NSRange src = NSMakeRange(srcIndex, 1);
+    NSRange target = NSMakeRange(tarIndex, 1);
+    
+    NSString* srcString = [sourceString substringWithRange:src];
+    NSString* targetString = [sourceString substringWithRange:target];
+    
+    [sourceString replaceCharactersInRange:src withString:targetString];
+    [sourceString replaceCharactersInRange:target withString:srcString];
+}
+
+- (NSString*)bubbleSort:(NSString *)sourceString
+{
+    NSMutableString* mstring = [NSMutableString stringWithString:sourceString];
+    
+    // 第一种方式，从头开始扫，扫到尾
+//    for (NSInteger i = 0; i < mstring.length; i ++) {
+//
+//        for (NSInteger j = 0; j < mstring.length - 1 - i; j ++) {
+//
+//            if ([mstring characterAtIndex:j] > [mstring characterAtIndex:(j + 1)]) {
+//
+//                [self exchangeStringIndex:mstring srcIndex:j tarIndex:(j + 1)];
+//            }
+//        }
+//    }
+
+    
+    for (NSInteger i = mstring.length - 1; i >= 0; i --) {
+        
+        for (NSInteger j = i; j < mstring.length - 1; j ++) {
+            
+            if ([mstring characterAtIndex:j] > [mstring characterAtIndex:(j + 1)]) {
+                
+                [self exchangeStringIndex:mstring srcIndex:j tarIndex:(j + 1)];
+            }
+        }
+    }
+    
+    return mstring;
+}
+
+- (NSString*)quickSort:(NSString *)sourceString
+{
+    NSMutableString* mstring = [NSMutableString stringWithString:sourceString];
+    return mstring;
+}
+
 @end

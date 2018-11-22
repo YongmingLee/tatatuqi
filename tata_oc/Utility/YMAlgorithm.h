@@ -51,4 +51,23 @@ typedef struct _YMABinaryTree
  */
 - (NSString*)reverseString:(NSString*)sourceString;
 
+
+
+/**
+ 冒泡排序
+
+ @param sourceString string
+ @return result
+ */
+- (NSString*)bubbleSort:(NSString*)sourceString;
+
+
+/**
+ 快速排序
+
+ @param sourceString string
+ @return result
+ */
+- (NSString*)quickSort:(NSString*)sourceString;
+
 @end

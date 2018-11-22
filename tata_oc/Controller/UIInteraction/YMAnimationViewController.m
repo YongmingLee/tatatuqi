@@ -11,6 +11,7 @@
 @interface YMAnimationViewController ()
 @property (nonatomic, strong) UIButton* eggButton;
 @property (nonatomic, strong) UIImageView* imageView;
+@property (nonatomic, strong) UIView* testView;
 @end
 
 @implementation YMAnimationViewController
@@ -55,16 +56,50 @@
     [img startAnimating];
     
     self.imageView = img;
+    
+    self.testView = [UIView new];
+    self.testView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:self.testView];
+    [self.testView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(self.view);
+        make.top.mas_equalTo(200);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
 }
 
 - (void)buttonClicked
 {
-    if (self.imageView.isAnimating)
-    {
-        [self.imageView stopAnimating];
-    } else {
-        [self.imageView startAnimating];
+//    if (self.imageView.isAnimating)
+//    {
+//        [self.imageView stopAnimating];
+//    } else {
+//        [self.imageView startAnimating];
+//    }
+    
+    static BOOL show = YES;
+    [self showWithAnimation:show view:self.testView];
+    show = !show;
+}
+
+- (void)showWithAnimation:(BOOL)show view:(UIView*)view
+{
+    if (show) {
+        view.hidden = NO;
     }
+    
+    [UIView animateWithDuration:3 animations:^{
+        if (show) {
+            view.alpha = 1;
+        } else {
+            view.alpha = 0;
+        }
+    } completion:^(BOOL finished) {
+        if (show) {
+            
+        } else {
+            view.hidden = YES;
+        }
+    }];
 }
 
 @end

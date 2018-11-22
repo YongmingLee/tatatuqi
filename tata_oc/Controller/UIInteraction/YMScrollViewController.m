@@ -47,24 +47,25 @@
  */
 - (void)testAutoScrollView
 {
-    UIScrollView* scroll = [UIScrollView new];
+    YMScrollView* scroll = [YMScrollView new];
     scroll.pagingEnabled = YES;
+    scroll.bounces = NO;
     [self.view addSubview:scroll];
     
     UIView* container = [UIView new];
     [scroll addSubview:container];
     
-    UIView* left = [UIView new];
+    UITableView* left = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [container addSubview:left];
     
-    UIView* right = [UIView new];
+    UITableView* right = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [container addSubview:right];
     
     [scroll mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(10);
-        make.top.mas_equalTo(104);
+        make.top.mas_equalTo(100);
         make.right.mas_equalTo(-10);
-        make.bottom.mas_equalTo(-90);
+        make.bottom.mas_equalTo(-100);
     }];
     
     [container mas_makeConstraints:^(MASConstraintMaker *make) {
