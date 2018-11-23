@@ -24,6 +24,10 @@
 		4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686520D20675006D54D1 /* LaunchScreen.storyboard */; };
 		4D22686A20D20675006D54D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22686920D20675006D54D1 /* main.m */; };
 		4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22687420D2086A006D54D1 /* YMScrollViewController.m */; };
+		4D38518021A7B0240083CC41 /* YMFeedsFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */; };
+		4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38518321A7CB230083CC41 /* YMFeedModel.m */; };
+		4D38518821A7CD660083CC41 /* Feeds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D38518721A7CD660083CC41 /* Feeds.plist */; };
+		4D38518D21A805C20083CC41 /* YMFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38518C21A805C20083CC41 /* YMFeedTableViewCell.m */; };
 		4D39791B20DCA7B50035C478 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791A20DCA7B50035C478 /* AudioToolbox.framework */; };
 		4D39791D20DCA7BD0035C478 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791C20DCA7BD0035C478 /* AVFoundation.framework */; };
 		4D39791F20DCA7C60035C478 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D39791E20DCA7C60035C478 /* CoreGraphics.framework */; };
@@ -97,6 +101,14 @@
 		4D22686920D20675006D54D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D22687320D2086A006D54D1 /* YMScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollViewController.h; sourceTree = "<group>"; };
 		4D22687420D2086A006D54D1 /* YMScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollViewController.m; sourceTree = "<group>"; };
+		4D38517E21A7B0240083CC41 /* YMFeedsFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFeedsFlowViewController.h; sourceTree = "<group>"; };
+		4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFeedsFlowViewController.m; sourceTree = "<group>"; };
+		4D38518221A7CB230083CC41 /* YMFeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFeedModel.h; sourceTree = "<group>"; };
+		4D38518321A7CB230083CC41 /* YMFeedModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFeedModel.m; sourceTree = "<group>"; };
+		4D38518721A7CD660083CC41 /* Feeds.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Feeds.plist; sourceTree = "<group>"; };
+		4D38518A21A7F1590083CC41 /* YMDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMDefine.h; sourceTree = "<group>"; };
+		4D38518B21A805C20083CC41 /* YMFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFeedTableViewCell.h; sourceTree = "<group>"; };
+		4D38518C21A805C20083CC41 /* YMFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFeedTableViewCell.m; sourceTree = "<group>"; };
 		4D39791A20DCA7B50035C478 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4D39791C20DCA7BD0035C478 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4D39791E20DCA7C60035C478 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -238,8 +250,22 @@
 			isa = PBXGroup;
 			children = (
 				4D22686320D20675006D54D1 /* Assets.xcassets */,
+				4D38518721A7CD660083CC41 /* Feeds.plist */,
 			);
 			path = Asset;
+			sourceTree = "<group>";
+		};
+		4D38518121A7CB0B0083CC41 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				4D38517E21A7B0240083CC41 /* YMFeedsFlowViewController.h */,
+				4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */,
+				4D38518221A7CB230083CC41 /* YMFeedModel.h */,
+				4D38518321A7CB230083CC41 /* YMFeedModel.m */,
+				4D38518B21A805C20083CC41 /* YMFeedTableViewCell.h */,
+				4D38518C21A805C20083CC41 /* YMFeedTableViewCell.m */,
+			);
+			path = Feeds;
 			sourceTree = "<group>";
 		};
 		4D7AEC67213645A800043593 /* Public */ = {
@@ -247,6 +273,7 @@
 			children = (
 				4D7AEC7121364A7200043593 /* YMHeader.pch */,
 				4D7AEC68213645D900043593 /* YMProtocol.h */,
+				4D38518A21A7F1590083CC41 /* YMDefine.h */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -295,6 +322,7 @@
 				4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */,
 				4DD81E002181705400C3011B /* YMAnimationViewController.h */,
 				4DD81E012181705400C3011B /* YMAnimationViewController.m */,
+				4D38518121A7CB0B0083CC41 /* Feeds */,
 			);
 			path = UIInteraction;
 			sourceTree = "<group>";
@@ -463,6 +491,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D38518821A7CD660083CC41 /* Feeds.plist in Resources */,
 				4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */,
 				4D22686420D20675006D54D1 /* Assets.xcassets in Resources */,
 				4D22686220D20673006D54D1 /* Main.storyboard in Resources */,
@@ -517,6 +546,7 @@
 				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
 				4D8F5CE8215B1E18005B855E /* JLAnchorPageScrollViewAgent.m in Sources */,
 				4D8F5CEE215B1FC2005B855E /* YMRightTableViewController.m in Sources */,
+				4D38518021A7B0240083CC41 /* YMFeedsFlowViewController.m in Sources */,
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
 				4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */,
@@ -540,6 +570,8 @@
 				4D0EBFB32137CE5D0063D556 /* YMAlgorithmDrawView.m in Sources */,
 				4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */,
 				4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */,
+				4D38518D21A805C20083CC41 /* YMFeedTableViewCell.m in Sources */,
+				4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

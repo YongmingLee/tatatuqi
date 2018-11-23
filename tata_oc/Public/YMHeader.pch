@@ -7,6 +7,7 @@
 //
 
 #ifdef __OBJC__
+    #import "YMDefine.h"
     #import <Masonry/Masonry.h>
     #import "YMProtocol.h"
     #import "UIColor+Util.h"
