@@ -33,7 +33,8 @@
     self.dataSources = @[@{@"cls":@"YMScrollViewController",@"desc":@"UIScrollView多滑动测试"},
                          @{@"cls":@"YMSafeAreaViewController",@"desc":@"布局测试"},
                          @{@"cls":@"YMAnimationViewController",@"desc":@"动画测试"},
-                         @{@"cls":@"YMFeedsFlowViewController",@"desc":@"Feed流"}];
+                         @{@"cls":@"YMFeedsFlowViewController",@"desc":@"Feed文字流"},
+                         @{@"cls":@"YMAutoFeedViewController",@"desc":@"Feed布局"}];
 }
 
 #pragma mark - UITableView

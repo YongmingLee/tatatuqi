@@ -37,6 +37,8 @@ typedef void (^TestBlock)(int);
     [super viewDidLoad];
 
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self testCopy];
 }
 
 /**
@@ -44,12 +46,16 @@ typedef void (^TestBlock)(int);
  */
 - (void)testCopy
 {
-    NSMutableString* abc = [[NSMutableString alloc] init];
+//    NSMutableString* abc = [[NSMutableString alloc] init];
+    
+    NSString* abc = @"123string";
     
     self.strongString = abc;
     self.copydString = abc;
     
-    [abc appendString:@"asdf"];
+//    [abc appendString:@"asdf"];
+    
+    abc = @"defkakakaka";
     
     
     NSArray* s = @[@""];

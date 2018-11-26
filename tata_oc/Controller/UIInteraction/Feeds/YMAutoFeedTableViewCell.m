@@ -1,14 +1,15 @@
 //
-//  YMFeedTableViewCell.m
+//  YMAutoFeedTableViewCell.m
 //  tata_oc
 //
-//  Created by yongming on 2018/11/23.
+//  Created by yongming on 2018/11/26.
 //  Copyright © 2018 yongming. All rights reserved.
 //
 
-#import "YMFeedTableViewCell.h"
+#import "YMAutoFeedTableViewCell.h"
 
-@interface YMFeedTableViewCell()
+
+@interface YMAutoFeedTableViewCell()
 
 @property (nonatomic, strong) UILabel* feedLabel;
 
@@ -16,7 +17,7 @@
 
 @end
 
-@implementation YMFeedTableViewCell
+@implementation YMAutoFeedTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -26,14 +27,16 @@
         
         [self.contentView addSubview:self.redView];
         [self.redView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.right.top.equalTo(self.contentView);
+            make.top.equalTo(self.contentView);
             make.height.mas_equalTo(0);
+            make.left.mas_equalTo(30);
+            make.right.mas_equalTo(-30);
         }];
         
         [self.contentView addSubview:self.feedLabel];
         [self.feedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.redView.mas_bottom);
             make.left.bottom.right.equalTo(self.contentView);
+            make.top.equalTo(self.redView.mas_bottom);
         }];
     }
     
@@ -42,11 +45,11 @@
 
 - (void)setFeedModel:(YMFeedModel *)feedModel
 {
+    self.feedLabel.text = feedModel.stringContent;
+    
     [self.redView mas_updateConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(feedModel.needDraw ? 60 : 0);
     }];
-    
-    self.feedLabel.text = feedModel.stringContent;
 }
 
 - (UILabel*)feedLabel

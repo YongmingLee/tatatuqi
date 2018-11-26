@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString* stringContent;
 @property (nonatomic, assign) NSInteger stringHeight;
 @property (nonatomic, assign) CGFloat fontSize;
+@property (nonatomic, assign) BOOL needDraw;
 
 + (YMFeedModel*)feedWithString:(NSString*)string;
 

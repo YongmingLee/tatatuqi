@@ -50,6 +50,8 @@
 		4D8F5CF3215B3703005B855E /* YMFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F5CF2215B3703005B855E /* YMFunc.m */; };
 		4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */; };
 		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
+		4DC73C4621ABC09300A80774 /* YMAutoFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC73C4521ABC09300A80774 /* YMAutoFeedTableViewCell.m */; };
+		4DC73C4921ABC0DB00A80774 /* YMAutoFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC73C4821ABC0DB00A80774 /* YMAutoFeedViewController.m */; };
 		4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD81E012181705400C3011B /* YMAnimationViewController.m */; };
 		4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1221F2142271B00BC3FED /* YMPhysicsViewController.m */; };
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
@@ -142,6 +144,10 @@
 		4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNormalAlgorithmViewController.m; sourceTree = "<group>"; };
 		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
 		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
+		4DC73C4421ABC09300A80774 /* YMAutoFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAutoFeedTableViewCell.h; sourceTree = "<group>"; };
+		4DC73C4521ABC09300A80774 /* YMAutoFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAutoFeedTableViewCell.m; sourceTree = "<group>"; };
+		4DC73C4721ABC0DB00A80774 /* YMAutoFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAutoFeedViewController.h; sourceTree = "<group>"; };
+		4DC73C4821ABC0DB00A80774 /* YMAutoFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAutoFeedViewController.m; sourceTree = "<group>"; };
 		4DD81E002181705400C3011B /* YMAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAnimationViewController.h; sourceTree = "<group>"; };
 		4DD81E012181705400C3011B /* YMAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAnimationViewController.m; sourceTree = "<group>"; };
 		4DE1221E2142271B00BC3FED /* YMPhysicsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMPhysicsViewController.h; sourceTree = "<group>"; };
@@ -260,10 +266,14 @@
 			children = (
 				4D38517E21A7B0240083CC41 /* YMFeedsFlowViewController.h */,
 				4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */,
-				4D38518221A7CB230083CC41 /* YMFeedModel.h */,
-				4D38518321A7CB230083CC41 /* YMFeedModel.m */,
 				4D38518B21A805C20083CC41 /* YMFeedTableViewCell.h */,
 				4D38518C21A805C20083CC41 /* YMFeedTableViewCell.m */,
+				4D38518221A7CB230083CC41 /* YMFeedModel.h */,
+				4D38518321A7CB230083CC41 /* YMFeedModel.m */,
+				4DC73C4721ABC0DB00A80774 /* YMAutoFeedViewController.h */,
+				4DC73C4821ABC0DB00A80774 /* YMAutoFeedViewController.m */,
+				4DC73C4421ABC09300A80774 /* YMAutoFeedTableViewCell.h */,
+				4DC73C4521ABC09300A80774 /* YMAutoFeedTableViewCell.m */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -563,7 +573,9 @@
 				4D22686A20D20675006D54D1 /* main.m in Sources */,
 				4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */,
 				4D7AEC6E2136464600043593 /* YMCommonViewController.m in Sources */,
+				4DC73C4621ABC09300A80774 /* YMAutoFeedTableViewCell.m in Sources */,
 				4D0EBFB72137DB8B0063D556 /* UIColor+Util.m in Sources */,
+				4DC73C4921ABC0DB00A80774 /* YMAutoFeedViewController.m in Sources */,
 				4DE1222B2142299200BC3FED /* YMUIViewController.m in Sources */,
 				4D7AEC6B2136462400043593 /* YMAlgorithm.m in Sources */,
 				4D22685C20D20673006D54D1 /* AppDelegate.m in Sources */,
