@@ -1,15 +1,14 @@
 //
-//  YMAutoFeedTableViewCell.m
+//  YMSysAutoFeedTableViewCell.m
 //  tata_oc
 //
-//  Created by yongming on 2018/11/26.
+//  Created by yongming on 2018/12/19.
 //  Copyright © 2018 yongming. All rights reserved.
 //
 
-#import "YMAutoFeedTableViewCell.h"
+#import "YMSysAutoFeedTableViewCell.h"
 
-
-@interface YMAutoFeedTableViewCell()
+@interface YMSysAutoFeedTableViewCell()
 
 @property (nonatomic, strong) UILabel* feedLabel;
 
@@ -19,7 +18,7 @@
 
 @end
 
-@implementation YMAutoFeedTableViewCell
+@implementation YMSysAutoFeedTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -34,8 +33,6 @@
             make.left.mas_equalTo(0);
             make.right.mas_equalTo(0);
         }];
-        
-        
         
         int n = 100;
         

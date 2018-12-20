@@ -34,7 +34,8 @@
                          @{@"cls":@"YMSafeAreaViewController",@"desc":@"布局测试"},
                          @{@"cls":@"YMAnimationViewController",@"desc":@"动画测试"},
                          @{@"cls":@"YMFeedsFlowViewController",@"desc":@"Feed文字流"},
-                         @{@"cls":@"YMAutoFeedViewController",@"desc":@"Feed布局"}];
+                         @{@"cls":@"YMAutoFeedViewController",@"desc":@"Feed布局"},
+                         @{@"cls":@"YMSysAutoFeedViewController",@"desc":@"Feed系统布局"}];
 }
 
 #pragma mark - UITableView

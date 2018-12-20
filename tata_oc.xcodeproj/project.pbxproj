@@ -49,6 +49,8 @@
 		4D8F5CEE215B1FC2005B855E /* YMRightTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F5CED215B1FC2005B855E /* YMRightTableViewController.m */; };
 		4D8F5CF3215B3703005B855E /* YMFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8F5CF2215B3703005B855E /* YMFunc.m */; };
 		4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */; };
+		4DB066EE21C9EEFC00700FFE /* YMSysAutoFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB066ED21C9EEFC00700FFE /* YMSysAutoFeedViewController.m */; };
+		4DB066F121C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB066F021C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m */; };
 		4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAAB99212D75A600F340C3 /* YMScrollView.m */; };
 		4DC73C4621ABC09300A80774 /* YMAutoFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC73C4521ABC09300A80774 /* YMAutoFeedTableViewCell.m */; };
 		4DC73C4921ABC0DB00A80774 /* YMAutoFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC73C4821ABC0DB00A80774 /* YMAutoFeedViewController.m */; };
@@ -142,6 +144,10 @@
 		4D8F5CF4215B4CEB005B855E /* JLAnchorPageScrollViewAgentDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLAnchorPageScrollViewAgentDelegate.h; sourceTree = "<group>"; };
 		4DA1D829213F8778006B7683 /* YMNormalAlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNormalAlgorithmViewController.h; sourceTree = "<group>"; };
 		4DA1D82A213F8778006B7683 /* YMNormalAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNormalAlgorithmViewController.m; sourceTree = "<group>"; };
+		4DB066EC21C9EEFC00700FFE /* YMSysAutoFeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSysAutoFeedViewController.h; sourceTree = "<group>"; };
+		4DB066ED21C9EEFC00700FFE /* YMSysAutoFeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSysAutoFeedViewController.m; sourceTree = "<group>"; };
+		4DB066EF21C9EF1400700FFE /* YMSysAutoFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSysAutoFeedTableViewCell.h; sourceTree = "<group>"; };
+		4DB066F021C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSysAutoFeedTableViewCell.m; sourceTree = "<group>"; };
 		4DBAAB98212D75A600F340C3 /* YMScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollView.h; sourceTree = "<group>"; };
 		4DBAAB99212D75A600F340C3 /* YMScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollView.m; sourceTree = "<group>"; };
 		4DC73C4421ABC09300A80774 /* YMAutoFeedTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAutoFeedTableViewCell.h; sourceTree = "<group>"; };
@@ -274,6 +280,10 @@
 				4DC73C4821ABC0DB00A80774 /* YMAutoFeedViewController.m */,
 				4DC73C4421ABC09300A80774 /* YMAutoFeedTableViewCell.h */,
 				4DC73C4521ABC09300A80774 /* YMAutoFeedTableViewCell.m */,
+				4DB066EC21C9EEFC00700FFE /* YMSysAutoFeedViewController.h */,
+				4DB066ED21C9EEFC00700FFE /* YMSysAutoFeedViewController.m */,
+				4DB066EF21C9EF1400700FFE /* YMSysAutoFeedTableViewCell.h */,
+				4DB066F021C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m */,
 			);
 			path = Feeds;
 			sourceTree = "<group>";
@@ -558,10 +568,12 @@
 				4D8F5CEE215B1FC2005B855E /* YMRightTableViewController.m in Sources */,
 				4D38518021A7B0240083CC41 /* YMFeedsFlowViewController.m in Sources */,
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
+				4DB066F121C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
 				4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */,
 				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
 				4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */,
+				4DB066EE21C9EEFC00700FFE /* YMSysAutoFeedViewController.m in Sources */,
 				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
 				4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
@@ -725,7 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X9RH92V4S6;
+				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
@@ -735,7 +747,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
+				PRODUCT_BUNDLE_IDENTIFIER = guagua.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
@@ -756,7 +768,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = X9RH92V4S6;
+				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
@@ -766,7 +778,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.qiju.tata-oc";
+				PRODUCT_BUNDLE_IDENTIFIER = guagua.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
