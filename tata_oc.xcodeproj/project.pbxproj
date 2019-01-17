@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F0D8E8E5B1F5A892BB8D57A /* libPods-tata_oc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */; };
+		4D0DB42A21F07B6600CB4F07 /* YMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DB42921F07B6600CB4F07 /* YMBaseViewController.m */; };
+		4D0DB42D21F07B8100CB4F07 /* YMReactiveCocoaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DB42C21F07B8100CB4F07 /* YMReactiveCocoaViewController.m */; };
 		4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFAA2137C14C0063D556 /* YMAlgorithmViewController.m */; };
 		4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFAF2137CD370063D556 /* YMBinaryTreeViewController.m */; };
 		4D0EBFB32137CE5D0063D556 /* YMAlgorithmDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0EBFB22137CE5D0063D556 /* YMAlgorithmDrawView.m */; };
@@ -75,6 +77,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4D0DB42821F07B6600CB4F07 /* YMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBaseViewController.h; sourceTree = "<group>"; };
+		4D0DB42921F07B6600CB4F07 /* YMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMBaseViewController.m; sourceTree = "<group>"; };
+		4D0DB42B21F07B8100CB4F07 /* YMReactiveCocoaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMReactiveCocoaViewController.h; sourceTree = "<group>"; };
+		4D0DB42C21F07B8100CB4F07 /* YMReactiveCocoaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMReactiveCocoaViewController.m; sourceTree = "<group>"; };
 		4D0EBFA92137C14C0063D556 /* YMAlgorithmViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMAlgorithmViewController.h; sourceTree = "<group>"; };
 		4D0EBFAA2137C14C0063D556 /* YMAlgorithmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMAlgorithmViewController.m; sourceTree = "<group>"; };
 		4D0EBFAE2137CD370063D556 /* YMBinaryTreeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMBinaryTreeViewController.h; sourceTree = "<group>"; };
@@ -354,6 +360,8 @@
 				4D19915D212697AC003D59D0 /* YMChatViewController.m */,
 				4DE122262142292300BC3FED /* YMThirdPartyViewController.h */,
 				4DE122272142292300BC3FED /* YMThirdPartyViewController.m */,
+				4D0DB42B21F07B8100CB4F07 /* YMReactiveCocoaViewController.h */,
+				4D0DB42C21F07B8100CB4F07 /* YMReactiveCocoaViewController.m */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -403,6 +411,8 @@
 				4DE1222D21422CF100BC3FED /* ThirdParty */,
 				4DE1222C21422CB600BC3FED /* UIInteraction */,
 				4DE1222E21422D1E00BC3FED /* Foundation */,
+				4D0DB42821F07B6600CB4F07 /* YMBaseViewController.h */,
+				4D0DB42921F07B6600CB4F07 /* YMBaseViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -578,6 +588,7 @@
 				4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,
+				4D0DB42A21F07B6600CB4F07 /* YMBaseViewController.m in Sources */,
 				4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */,
 				4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */,
 				4D8F5CF3215B3703005B855E /* YMFunc.m in Sources */,
@@ -595,6 +606,7 @@
 				4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */,
 				4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */,
 				4D38518D21A805C20083CC41 /* YMFeedTableViewCell.m in Sources */,
+				4D0DB42D21F07B8100CB4F07 /* YMReactiveCocoaViewController.m in Sources */,
 				4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,5 +13,6 @@
     #import "UIColor+Util.h"
     #import "YMAlgorithm.h"
     #import "YMFunc.h"
+    #import <ReactiveObjC/ReactiveObjC.h>
 #endif
 

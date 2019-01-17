@@ -30,7 +30,8 @@
         make.edges.equalTo(self.view);
     }];
     
-    self.dataSources = @[@{@"cls":@"YMChatViewController",@"desc":@"QQ闲聊SDK"}];
+    self.dataSources = @[@{@"cls":@"YMChatViewController",@"desc":@"QQ闲聊SDK"},
+                         @{@"cls":@"YMReactiveCocoaViewController",@"desc":@"ReactiveCocoa"}];
 }
 
 #pragma mark - UITableView

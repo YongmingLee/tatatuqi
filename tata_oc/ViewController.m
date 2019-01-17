@@ -78,10 +78,6 @@
     vc.title = data[@"desc"];
     vc.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController pushViewController:vc animated:YES];
-    
-    
-    self.navigationController.navigationBar.tintColor = [UIColor blueColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
 }
 
 @end
