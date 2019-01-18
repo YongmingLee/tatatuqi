@@ -21,6 +21,11 @@
 @property (nonatomic, strong) RACSubject* signalB;
 @property (nonatomic, strong) RACSubject* signalC;
 
+@property (nonatomic, strong) RACSubject* signalD;
+@property (nonatomic, strong) RACSubject* signalE;
+
+@property (nonatomic, strong) RACDisposable* intervalDisposable;
+
 @end
 
 @implementation YMReactiveCocoaViewController
@@ -29,7 +34,32 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self testObserve];
+//    [self testObserve];
+    [self test1];
+}
+
+- (void)test1
+{
+    // take 只取前几次的信号
+    // throttle 节流
+    self.signalB = [RACSubject subject];
+    self.signalC = [RACSubject subject];
+    RACSignal* concatSignal = [self.signalB concat:self.signalC];
+    [[[concatSignal take:2000] throttle:1] subscribeNext:^(id  _Nullable x) {
+        NSLog(@"concat:%@", x);
+    }];
+    
+    // 定时
+//    self.intervalDisposable = [[RACSignal interval:1 onScheduler:[RACScheduler mainThreadScheduler]] subscribeNext:^(NSDate * _Nullable x) {
+//        NSLog(@"interval:%@", x);
+//    }];
+}
+
+- (void)triggerTest1
+{
+    [self.signalB sendNext:@1];
+    
+    [self.signalC sendNext:@100];
 }
 
 - (void)testObserve
@@ -45,17 +75,30 @@
         NSLog(@"signal[Thread:%d]:%@", [NSThread isMainThread], x);
     }];
     
-    // 组合信号测试
+    
+    /*
+     * combineLatest: 并的关系
+     * merge: 或的关系
+     */
+    
+    // 组合信号测试 (∪)
     self.signalB = [RACSubject subject];
     self.signalC = [RACSubject subject];
+    [[RACSignal combineLatest:@[self.signalB, self.signalC]] subscribeNext:^(RACTuple * _Nullable x) {
+        // 只有两个信号都触发后，才能收到回调
+        NSLog(@"combine ...");
+    }];
     
-    RACSignal* signals = [self.signalB concat:self.signalC];
-    [signals subscribeNext:^(id  _Nullable x) {
-        NSLog(@"signals:%@", x);
+    // 只要有一个信号触发，就回调。（|）
+    self.signalD = [RACSubject subject];
+    self.signalE = [RACSubject subject];
+    [[RACSignal merge:@[self.signalD, self.signalE]] subscribeNext:^(id  _Nullable x) {
+       
+        NSLog(@"merge...");
     }];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+- (void)triggerObserve
 {
     // 更改观察者属性
     static bool state = true;
@@ -70,14 +113,26 @@
         }
     });
     
-    [self.signalC sendNext:@30];
+    // 触发两个信号，触发组合信号
     [self.signalB sendNext:@20];
-//    [self.signalB sendCompleted];
+    [self.signalC sendNext:@30];
+    
+    // merge 测试
+    [self.signalE sendNext:@1];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+{
+    [self triggerTest1];
 }
 
 - (void)dealloc
 {
     NSLog(@"%@ dealloc...", NSStringFromClass([self class]));
+    
+    if (self.intervalDisposable) {
+        [self.intervalDisposable dispose];
+    }
 }
 
 @end
