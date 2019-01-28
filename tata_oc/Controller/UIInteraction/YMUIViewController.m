@@ -71,7 +71,7 @@
     
     UIViewController* vc = [[vcCLS alloc] init];
     vc.title = data[@"desc"];
-//    vc.edgesForExtendedLayout = UIRectEdgeNone;
+    vc.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
