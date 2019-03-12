@@ -37,6 +37,7 @@
                          @{@"cls":@"YMMathsViewController",@"desc":@"数学"},
                          @{@"cls":@"YMPhysicsViewController",@"desc":@"物理"},
                          @{@"cls":@"YMUIViewController",@"desc":@"用户交互"},
+                         @{@"cls":@"YMThreadTestController",@"desc":@"线程测试"},
                          @{@"cls":@"YMThirdPartyViewController",@"desc":@"第三方"},
                          @{@"cls":@"YMCommonViewController",@"desc":@"基础"}];
 }

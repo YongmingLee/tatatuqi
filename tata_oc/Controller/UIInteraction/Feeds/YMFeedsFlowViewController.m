@@ -38,7 +38,7 @@
     
     [self.tableView registerClass:[YMFeedTableViewCell class] forCellReuseIdentifier:@"cell"];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClicked:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"添加新数据" style:UIBarButtonItemStyleDone target:self action:@selector(rightButtonClicked:)];
 }
 
 - (void)rightButtonClicked:(id)sender

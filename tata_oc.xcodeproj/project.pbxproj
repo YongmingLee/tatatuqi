@@ -26,6 +26,8 @@
 		4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D22686520D20675006D54D1 /* LaunchScreen.storyboard */; };
 		4D22686A20D20675006D54D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22686920D20675006D54D1 /* main.m */; };
 		4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D22687420D2086A006D54D1 /* YMScrollViewController.m */; };
+		4D24B7A322366FC400B71755 /* YMThreadTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D24B7A222366FC400B71755 /* YMThreadTestController.m */; };
+		4D257E81221E3F290029BBCC /* YMTestSwipCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D257E80221E3F290029BBCC /* YMTestSwipCellViewController.m */; };
 		4D38518021A7B0240083CC41 /* YMFeedsFlowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */; };
 		4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D38518321A7CB230083CC41 /* YMFeedModel.m */; };
 		4D38518821A7CD660083CC41 /* Feeds.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D38518721A7CD660083CC41 /* Feeds.plist */; };
@@ -111,6 +113,10 @@
 		4D22686920D20675006D54D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D22687320D2086A006D54D1 /* YMScrollViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMScrollViewController.h; sourceTree = "<group>"; };
 		4D22687420D2086A006D54D1 /* YMScrollViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMScrollViewController.m; sourceTree = "<group>"; };
+		4D24B7A122366FC400B71755 /* YMThreadTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMThreadTestController.h; sourceTree = "<group>"; };
+		4D24B7A222366FC400B71755 /* YMThreadTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMThreadTestController.m; sourceTree = "<group>"; };
+		4D257E7F221E3F290029BBCC /* YMTestSwipCellViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMTestSwipCellViewController.h; sourceTree = "<group>"; };
+		4D257E80221E3F290029BBCC /* YMTestSwipCellViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMTestSwipCellViewController.m; sourceTree = "<group>"; };
 		4D38517E21A7B0240083CC41 /* YMFeedsFlowViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFeedsFlowViewController.h; sourceTree = "<group>"; };
 		4D38517F21A7B0240083CC41 /* YMFeedsFlowViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMFeedsFlowViewController.m; sourceTree = "<group>"; };
 		4D38518221A7CB230083CC41 /* YMFeedModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMFeedModel.h; sourceTree = "<group>"; };
@@ -264,6 +270,24 @@
 			path = tata_oc;
 			sourceTree = "<group>";
 		};
+		4D24B7A022366FA500B71755 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				4D24B7A122366FC400B71755 /* YMThreadTestController.h */,
+				4D24B7A222366FC400B71755 /* YMThreadTestController.m */,
+			);
+			path = Thread;
+			sourceTree = "<group>";
+		};
+		4D257E7E221E3EFD0029BBCC /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				4D257E7F221E3F290029BBCC /* YMTestSwipCellViewController.h */,
+				4D257E80221E3F290029BBCC /* YMTestSwipCellViewController.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
 		4D2A9DE920E9F5DC00024B26 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -339,6 +363,7 @@
 		4DE1222C21422CB600BC3FED /* UIInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				4D257E7E221E3EFD0029BBCC /* TableView */,
 				4D8F5CE5215B1DE3005B855E /* TestIntegrate */,
 				4DE122292142299200BC3FED /* YMUIViewController.h */,
 				4DE1222A2142299200BC3FED /* YMUIViewController.m */,
@@ -405,6 +430,7 @@
 		4DE4644E212E588F00E16AB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4D24B7A022366FA500B71755 /* Thread */,
 				4DE122222142273D00BC3FED /* Maths */,
 				4DE122212142273400BC3FED /* Physics */,
 				4D0EBFAD2137CCBA0063D556 /* Algorithm */,
@@ -580,6 +606,7 @@
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
 				4DB066F121C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
+				4D24B7A322366FC400B71755 /* YMThreadTestController.m in Sources */,
 				4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */,
 				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
 				4DE122202142271B00BC3FED /* YMPhysicsViewController.m in Sources */,
@@ -606,6 +633,7 @@
 				4D19915E212697AC003D59D0 /* YMChatViewController.m in Sources */,
 				4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */,
 				4D38518D21A805C20083CC41 /* YMFeedTableViewCell.m in Sources */,
+				4D257E81221E3F290029BBCC /* YMTestSwipCellViewController.m in Sources */,
 				4D0DB42D21F07B8100CB4F07 /* YMReactiveCocoaViewController.m in Sources */,
 				4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */,
 			);
