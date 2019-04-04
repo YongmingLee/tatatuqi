@@ -6,8 +6,8 @@
 //  Copyright © 2018年 yongming. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "YMBaseViewController.h"
 
-@interface YMSafeAreaViewController : UIViewController
+@interface YMSafeAreaViewController : YMBaseViewController
 
 @end

@@ -38,6 +38,10 @@ typedef void (^TestBlock)(int);
 
     self.view.backgroundColor = [UIColor whiteColor];
     
+    NSString* test = @"{asdfsdf}}";
+    
+    BOOL isJson = ([test rangeOfString:@"}}"].location != NSNotFound);
+    
     [self testCopy];
 }
 

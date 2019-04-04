@@ -18,12 +18,36 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self testMultiRequest];
+    [self testRunloop];
 }
 
+- (void) dealloc
+{
+    NSLog(@"thread controller is dealloc");
+}
+
+- (void)testRunloop
+{
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+       
+        NSLog(@"This is a thread:%@", [NSThread currentThread]);
+        
+        NSRunLoop* currentRunloop = [NSRunLoop currentRunLoop];
+        NSLog(@"Current runloop is :%@", currentRunloop);
+        
+        [currentRunloop runMode:UITrackingRunLoopMode beforeDate:[NSDate distantFuture]];
+        
+        NSLog(@"runloop is over");
+    });
+    
+    NSLog(@"The function live is over:%@", [NSThread currentThread]);
+}
+
+// 主要是针对信号量控制同步执行的一种方式
+// Semaphore
 - (void)testMultiRequest
 {
-    dispatch_semaphore_t sem = dispatch_semaphore_create(1);
+    dispatch_semaphore_t sem = dispatch_semaphore_create(0);
     
     NSLog(@"start");
 
@@ -45,6 +69,7 @@
     NSLog(@"Oh, over!!!");
 }
 
+// GCD Group 的应用
 - (void)testGroup
 {
     dispatch_group_t group = dispatch_group_create();

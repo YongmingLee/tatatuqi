@@ -36,7 +36,8 @@
                          @{@"cls":@"YMFeedsFlowViewController",@"desc":@"Feed文字流"},
                          @{@"cls":@"YMAutoFeedViewController",@"desc":@"Feed布局"},
                          @{@"cls":@"YMSysAutoFeedViewController",@"desc":@"Feed系统布局"},
-                         @{@"cls":@"YMTestSwipCellViewController",@"desc":@"测试cell滑动"}];
+                         @{@"cls":@"YMTestSwipCellViewController",@"desc":@"测试cell滑动"},
+                         @{@"cls":@"YMUITableViewTestViewController",@"desc":@"UITableView测试"}];
 }
 
 #pragma mark - UITableView

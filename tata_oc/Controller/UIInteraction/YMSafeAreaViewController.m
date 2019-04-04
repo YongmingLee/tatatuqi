@@ -17,12 +17,52 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
-    self.view.backgroundColor = [UIColor whiteColor];
     
-    [self testGradient];
+//    self.title = @"hallo";
+    
+    UIView* titleView = [[UIView alloc] init];
+    titleView.backgroundColor = [UIColor greenColor];
+    self.navigationItem.titleView = titleView;
+    
+    UIView* containerView = [[UIView alloc] init];
+    [titleView addSubview:containerView];
+    containerView.backgroundColor = [UIColor blueColor];
+    
+    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(titleView);
+    }];
+    
+    
+    UIView* blockView = [[UIView alloc] init];
+    blockView.backgroundColor = [UIColor redColor];
+    [containerView addSubview:blockView];
+
+    UILabel* titleLabel = [[UILabel alloc] init];
+    [containerView addSubview:titleLabel];
+    titleLabel.backgroundColor = [UIColor redColor];
+
+    [blockView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(16, 16));
+        make.left.mas_equalTo(0);
+        make.top.mas_equalTo(-8);
+        make.right.mas_equalTo(titleLabel.mas_left).offset(-10);
+    }];
+
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(blockView.mas_right).offset(10);
+        make.centerY.equalTo(blockView);
+//        make.size.mas_equalTo(CGSizeMake(50, 20));
+        make.height.mas_equalTo(20);
+        make.right.mas_equalTo(0);
+    }];
+    
+    titleLabel.text = @"hello";
 }
 
+
+/**
+ 测试渐变
+ */
 - (void)testGradient
 {
     UIButton* confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
