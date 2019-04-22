@@ -14,5 +14,6 @@
     #import "YMAlgorithm.h"
     #import "YMFunc.h"
     #import <ReactiveObjC/ReactiveObjC.h>
+    #import <YYModel/YYModel.h>
 #endif
 

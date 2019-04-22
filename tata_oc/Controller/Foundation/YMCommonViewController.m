@@ -10,6 +10,25 @@
 
 typedef void (^TestBlock)(int);
 
+@interface JLPCTextSubModel : NSObject
+@property (nonatomic, strong) NSString* fromtype;
+@property (nonatomic, strong) NSString* fromlevel;
+@property (nonatomic, strong) NSString* totype;
+@property (nonatomic, strong) NSString* tolevel;
+@property (nonatomic, strong) NSString* msgtype;
+@end
+@implementation JLPCTextSubModel
+@end
+
+@interface JLPCTextMessageModel : NSObject
+@property (nonatomic, strong) NSString* content;
+@property (nonatomic, strong) NSString* extra;
+@end
+
+@implementation JLPCTextMessageModel
+@end
+
+
 @interface YMCommonViewController ()
 
 @property (nonatomic, strong)NSString* name;
@@ -35,12 +54,48 @@ typedef void (^TestBlock)(int);
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    
+    NSString* filePath = [NSString stringWithFormat:@"%@/abc", path];
+    
+    NSLog(@"filePath:%@", filePath);
+    
+    FILE* fp = fopen([filePath UTF8String], "r+");
+    
+//    char bb[10] = "hello";
+//
+//    fwrite(fp, sizeof(bb), 1, fp)
+    
+    fseek(fp, 2, 0);
+    
+//    char buf[2] = "\0";
+    char c = '\0';
+    
+    fwrite(&c, sizeof(char), 1, fp);
+    
+    fclose(fp);
+    
+    
 
     self.view.backgroundColor = [UIColor whiteColor];
     
     NSString* test = @"{asdfsdf}}";
     
     BOOL isJson = ([test rangeOfString:@"}}"].location != NSNotFound);
+    NSLog(@"isJson:%d", isJson);
+    
+    NSString* abc = @"{\"content\":\"我送你\\n摇钱树 * 1\",\"extra\":{\"fromlevel\":\"2083\",\"fromtype\":\"5\",\"msgtype\":\"1\",\"tolevel\":\"0\",\"totype\":\"0\"}}";
+    
+    JLPCTextMessageModel* model = [JLPCTextMessageModel yy_modelWithJSON:abc];
+    NSLog(@"extra:%@", model.extra);
+    
+//    JLPCTextMessageModel* modelWrite = [[JLPCTextMessageModel alloc] init];
+//    modelWrite.content = @"Hello";
+//    modelWrite.extra = @"{\"name\":\"Yongming\"}";
+//
+//    NSString* jsonString = [modelWrite yy_modelToJSONString];
+//    NSLog(@"json:%@", jsonString);
     
     [self testCopy];
 }
