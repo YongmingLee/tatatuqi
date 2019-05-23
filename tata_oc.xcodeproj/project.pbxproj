@@ -793,7 +793,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = guagua.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guagau.stream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (
@@ -824,7 +824,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = guagua.com;
+				PRODUCT_BUNDLE_IDENTIFIER = com.guagau.stream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = (

@@ -7,6 +7,12 @@
 //
 
 #import "YMCommonViewController.h"
+#import <YMUtils/YMDeviceUtil.h>
+
+#define YMRunTime(...) double time0 = CFAbsoluteTimeGetCurrent() * 1000; \
+__VA_ARGS__; \
+double t = CFAbsoluteTimeGetCurrent() * 1000 - time0; \
+NSLog(@"[%s]-time consumed miliseconds:%f", __func__, t); \
 
 typedef void (^TestBlock)(int);
 
@@ -55,49 +61,11 @@ typedef void (^TestBlock)(int);
 {
     [super viewDidLoad];
     
-    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    YMRunTime(
+              [self testCopy];
+              );
     
-    NSString* filePath = [NSString stringWithFormat:@"%@/abc", path];
-    
-    NSLog(@"filePath:%@", filePath);
-    
-    FILE* fp = fopen([filePath UTF8String], "r+");
-    
-//    char bb[10] = "hello";
-//
-//    fwrite(fp, sizeof(bb), 1, fp)
-    
-    fseek(fp, 2, 0);
-    
-//    char buf[2] = "\0";
-    char c = '\0';
-    
-    fwrite(&c, sizeof(char), 1, fp);
-    
-    fclose(fp);
-    
-    
-
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    NSString* test = @"{asdfsdf}}";
-    
-    BOOL isJson = ([test rangeOfString:@"}}"].location != NSNotFound);
-    NSLog(@"isJson:%d", isJson);
-    
-    NSString* abc = @"{\"content\":\"我送你\\n摇钱树 * 1\",\"extra\":{\"fromlevel\":\"2083\",\"fromtype\":\"5\",\"msgtype\":\"1\",\"tolevel\":\"0\",\"totype\":\"0\"}}";
-    
-    JLPCTextMessageModel* model = [JLPCTextMessageModel yy_modelWithJSON:abc];
-    NSLog(@"extra:%@", model.extra);
-    
-//    JLPCTextMessageModel* modelWrite = [[JLPCTextMessageModel alloc] init];
-//    modelWrite.content = @"Hello";
-//    modelWrite.extra = @"{\"name\":\"Yongming\"}";
-//
-//    NSString* jsonString = [modelWrite yy_modelToJSONString];
-//    NSLog(@"json:%@", jsonString);
-    
-    [self testCopy];
+    [YMDeviceUtil printDeviceName];
 }
 
 /**
@@ -105,6 +73,28 @@ typedef void (^TestBlock)(int);
  */
 - (void)testCopy
 {
+    // first step
+    NSString* testString = @"";
+    
+    NSString* targetString = @"123";
+    
+    testString = [targetString mutableCopy]; // copy 是指针复制，mutableCopy是内容复制，深拷贝
+    
+    targetString = @"456";
+    
+    // second step
+    
+    NSArray* testArray = @[];
+    
+    NSMutableArray* targetArray = [NSMutableArray array];
+    
+    [targetArray addObject:@"123"];
+    
+    testArray = [targetArray copy];
+    
+    [targetArray addObject:@"456"];
+    
+    
 //    NSMutableString* abc = [[NSMutableString alloc] init];
     
     NSString* abc = @"123string";
@@ -129,8 +119,6 @@ typedef void (^TestBlock)(int);
     self.copydArray = s2;
     
     [s2 addObject:@"def"];
-
-    NSLog(@"");
 }
 
 /**

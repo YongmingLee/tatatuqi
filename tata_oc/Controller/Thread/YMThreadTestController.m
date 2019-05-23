@@ -14,16 +14,40 @@
 
 @implementation YMThreadTestController
 
+- (void) dealloc
+{
+    NSLog(@"thread controller is dealloc");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self testRunloop];
+    [self testGroupMore];
 }
 
-- (void) dealloc
+- (void)testGroup
 {
-    NSLog(@"thread controller is dealloc");
+    NSLog(@"start");
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, queue, ^{
+        [NSThread sleepForTimeInterval:1];
+        NSLog(@"1 - %@", [NSThread currentThread]);
+    });
+    dispatch_group_async(group, queue, ^{ /*加载图片2 */
+        [NSThread sleepForTimeInterval:2];
+        NSLog(@"2 - %@", [NSThread currentThread]);
+    });
+    dispatch_group_async(group, queue, ^{ /*加载图片3 */
+        [NSThread sleepForTimeInterval:3];
+        NSLog(@"3 - %@", [NSThread currentThread]);
+    });
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        // 合并图片
+        
+        NSLog(@"over");
+    });
 }
 
 - (void)testRunloop
@@ -70,7 +94,7 @@
 }
 
 // GCD Group 的应用
-- (void)testGroup
+- (void)testGroupMore
 {
     dispatch_group_t group = dispatch_group_create();
     
@@ -83,7 +107,7 @@
             
             NSLog(@"run : %d", i+1);
             
-            sleep(3);
+            sleep(1);
         });
     }
     
