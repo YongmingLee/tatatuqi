@@ -23,8 +23,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self testGroupMore];
+    YMRunInMainThread(
+                      NSLog(@"hello-1-%@", [NSThread currentThread]);
+                      );
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"hello-2-1-%@", [NSThread currentThread]);
+        YMRunInMainThread(
+                          NSLog(@"hello-2-%@", [NSThread currentThread]);
+                          );
+    });
 }
+
 
 - (void)testGroup
 {

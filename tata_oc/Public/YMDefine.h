@@ -19,6 +19,19 @@
 #define kScreenWidth            ([UIScreen mainScreen].bounds.size.width)
 #define kScreenHeight           ([UIScreen mainScreen].bounds.size.height)
 
+#define YMRunTime(...) double time0 = CFAbsoluteTimeGetCurrent() * 1000; \
+__VA_ARGS__; \
+double t = CFAbsoluteTimeGetCurrent() * 1000 - time0; \
+NSLog(@"[%s]-time consumed miliseconds:%f", __func__, t);
+
+#define YMRunInMainThread(...) \
+if ([NSThread isMainThread]) { \
+__VA_ARGS__; \
+} else { \
+dispatch_async(dispatch_get_main_queue(), ^{ \
+__VA_ARGS__; \
+}); \
+}
 
 #pragma mark - 逻辑部分
 

@@ -9,10 +9,7 @@
 #import "YMCommonViewController.h"
 #import <YMUtils/YMDeviceUtil.h>
 
-#define YMRunTime(...) double time0 = CFAbsoluteTimeGetCurrent() * 1000; \
-__VA_ARGS__; \
-double t = CFAbsoluteTimeGetCurrent() * 1000 - time0; \
-NSLog(@"[%s]-time consumed miliseconds:%f", __func__, t); \
+
 
 typedef void (^TestBlock)(int);
 
