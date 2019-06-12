@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YMScrollViewController : UIViewController
+@interface YMScrollViewController : YMBaseViewController
 
 @end

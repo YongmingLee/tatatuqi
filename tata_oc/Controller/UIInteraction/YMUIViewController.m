@@ -37,7 +37,8 @@
                          @{@"cls":@"YMAutoFeedViewController",@"desc":@"Feed布局"},
                          @{@"cls":@"YMSysAutoFeedViewController",@"desc":@"Feed系统布局"},
                          @{@"cls":@"YMTestSwipCellViewController",@"desc":@"测试cell滑动"},
-                         @{@"cls":@"YMUITableViewTestViewController",@"desc":@"UITableView测试"}];
+                         @{@"cls":@"YMUITableViewTestViewController",@"desc":@"UITableView测试"},
+                         @{@"cls":@"YMCollectionTest01ViewController",@"desc":@"UICollectionView测试01"}];
 }
 
 #pragma mark - UITableView

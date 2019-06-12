@@ -64,6 +64,7 @@
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
 		4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122272142292300BC3FED /* YMThirdPartyViewController.m */; };
 		4DE1222B2142299200BC3FED /* YMUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1222A2142299200BC3FED /* YMUIViewController.m */; };
+		B466B43D22B0ACF5008D5F78 /* YMCollectionTest01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -181,6 +182,8 @@
 		4DE1222A2142299200BC3FED /* YMUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUIViewController.m; sourceTree = "<group>"; };
 		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
 		87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tata_oc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B466B43B22B0ACF4008D5F78 /* YMCollectionTest01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCollectionTest01ViewController.h; sourceTree = "<group>"; };
+		B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCollectionTest01ViewController.m; sourceTree = "<group>"; };
 		EF9707026339CD0FA9E3136A /* Pods-tata_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,6 +371,7 @@
 		4DE1222C21422CB600BC3FED /* UIInteraction */ = {
 			isa = PBXGroup;
 			children = (
+				B466B43A22B0AC85008D5F78 /* CollectionView */,
 				4D257E7E221E3EFD0029BBCC /* TableView */,
 				4D8F5CE5215B1DE3005B855E /* TestIntegrate */,
 				4DE122292142299200BC3FED /* YMUIViewController.h */,
@@ -453,6 +457,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B466B43A22B0AC85008D5F78 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				B466B43B22B0ACF4008D5F78 /* YMCollectionTest01ViewController.h */,
+				B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		B5712375E0A6EBF36BB48D87 /* Pods */ = {
@@ -605,6 +618,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D22685F20D20673006D54D1 /* ViewController.m in Sources */,
+				B466B43D22B0ACF5008D5F78 /* YMCollectionTest01ViewController.m in Sources */,
 				4D8F5CE8215B1E18005B855E /* JLAnchorPageScrollViewAgent.m in Sources */,
 				4D8F5CEE215B1FC2005B855E /* YMRightTableViewController.m in Sources */,
 				4D38518021A7B0240083CC41 /* YMFeedsFlowViewController.m in Sources */,
