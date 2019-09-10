@@ -57,8 +57,32 @@
     }];
     
     titleLabel.text = @"hello";
+    
+    [self testMasonry];
 }
 
+- (void)testMasonry {
+    UIView* view = [[UIView alloc] init];
+    [self.view addSubview:view];
+    
+    view.backgroundColor = [UIColor redColor];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+        make.center.equalTo(self.view);
+    }];
+    
+    
+    UIView* right = [[UIView alloc] init];
+    right.backgroundColor = [UIColor greenColor];
+    
+    [self.view addSubview:right];
+    [right mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(view.mas_right);
+        make.size.mas_equalTo(CGSizeMake(100, 100));
+        make.centerY.equalTo(view);
+    }];
+}
 
 /**
  测试渐变

@@ -9,8 +9,6 @@
 #import "YMCommonViewController.h"
 #import <YMUtils/YMDeviceUtil.h>
 
-
-
 typedef void (^TestBlock)(int);
 
 @interface JLPCTextSubModel : NSObject
@@ -58,11 +56,58 @@ typedef void (^TestBlock)(int);
 {
     [super viewDidLoad];
     
-    YMRunTime(
-              [self testCopy];
-              );
+//    YMRunTime(
+//              [self testCopy];
+//              );
+//
+//    [YMDeviceUtil printDeviceName];
     
-    [YMDeviceUtil printDeviceName];
+    
+//    UIImageView* image = [[UIImageView alloc] init];
+//    [self.view addSubview:image];
+//
+//    image.image = [[UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"arrow@2x" ofType:@"png"]] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//
+//    image.tintColor = [UIColor redColor];
+//
+//    self.view.tintColor = [UIColor yellowColor];
+//
+//    [image mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self.view);
+//    }];
+    
+    
+//    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [self.view addSubview:button];
+//    [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [button setTitle:@"Click" forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"php_unfollow"] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"non_follow_bit"] forState:UIControlStateSelected];
+//
+//    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.mas_equalTo(CGSizeMake(100, 100));
+//        make.center.equalTo(self.view);
+//    }];
+//
+//    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UILabel* label = [[UILabel alloc] init];
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.width.mas_equalTo(200);
+    }];
+    
+    label.numberOfLines = 0;
+    label.text = @"威马汽车与格力电器签署战略合作协议，双方将在智能制造、车家智能互联等智能化相关领域，"
+    "以及整车制造相关、高端设备输出等方面展开深入合作，并将共同探索在渠道方面合作的可能性。";
+    label.backgroundColor = [UIColor redColor];
+    label.textColor = [UIColor whiteColor];
+}
+
+- (void)buttonClicked:(UIButton*)button {
+    button.selected = !button.isSelected;
 }
 
 /**

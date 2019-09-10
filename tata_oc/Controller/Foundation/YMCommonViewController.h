@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YMCommonViewController : UIViewController
+@interface YMCommonViewController : YMBaseViewController
 
 @end

@@ -64,7 +64,11 @@
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
 		4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122272142292300BC3FED /* YMThirdPartyViewController.m */; };
 		4DE1222B2142299200BC3FED /* YMUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1222A2142299200BC3FED /* YMUIViewController.m */; };
+		B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */; };
+		B43588A223279F150007FD55 /* YMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B43588A123279F150007FD55 /* YMProxy.m */; };
+		B43B64DA22FD4544009AA0A5 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43B64D922FD4544009AA0A5 /* arrow@2x.png */; };
 		B466B43D22B0ACF5008D5F78 /* YMCollectionTest01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */; };
+		B4B16ADE22F3FFD70004BD56 /* YMNaviBarTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B16ADD22F3FFD70004BD56 /* YMNaviBarTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -182,8 +186,15 @@
 		4DE1222A2142299200BC3FED /* YMUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUIViewController.m; sourceTree = "<group>"; };
 		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
 		87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tata_oc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B435889D232794BC0007FD55 /* YMCollectionTest02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCollectionTest02ViewController.h; sourceTree = "<group>"; };
+		B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCollectionTest02ViewController.m; sourceTree = "<group>"; };
+		B43588A023279F150007FD55 /* YMProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMProxy.h; sourceTree = "<group>"; };
+		B43588A123279F150007FD55 /* YMProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMProxy.m; sourceTree = "<group>"; };
+		B43B64D922FD4544009AA0A5 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
 		B466B43B22B0ACF4008D5F78 /* YMCollectionTest01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCollectionTest01ViewController.h; sourceTree = "<group>"; };
 		B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCollectionTest01ViewController.m; sourceTree = "<group>"; };
+		B4B16ADC22F3FFD70004BD56 /* YMNaviBarTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNaviBarTestViewController.h; sourceTree = "<group>"; };
+		B4B16ADD22F3FFD70004BD56 /* YMNaviBarTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMNaviBarTestViewController.m; sourceTree = "<group>"; };
 		EF9707026339CD0FA9E3136A /* Pods-tata_oc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.release.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -299,6 +310,7 @@
 		4D2A9DE920E9F5DC00024B26 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				B43B64D922FD4544009AA0A5 /* arrow@2x.png */,
 				4D22686320D20675006D54D1 /* Assets.xcassets */,
 				4D38518721A7CD660083CC41 /* Feeds.plist */,
 			);
@@ -382,6 +394,8 @@
 				4D15ADF22147891900B36D0C /* YMSafeAreaViewController.m */,
 				4DD81E002181705400C3011B /* YMAnimationViewController.h */,
 				4DD81E012181705400C3011B /* YMAnimationViewController.m */,
+				B4B16ADC22F3FFD70004BD56 /* YMNaviBarTestViewController.h */,
+				B4B16ADD22F3FFD70004BD56 /* YMNaviBarTestViewController.m */,
 				4D38518121A7CB0B0083CC41 /* Feeds */,
 			);
 			path = UIInteraction;
@@ -432,6 +446,8 @@
 				4D0EBFB92137E2120063D556 /* YMDrawUtil.m */,
 				4D8F5CF1215B3703005B855E /* YMFunc.h */,
 				4D8F5CF2215B3703005B855E /* YMFunc.m */,
+				B43588A023279F150007FD55 /* YMProxy.h */,
+				B43588A123279F150007FD55 /* YMProxy.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -464,6 +480,8 @@
 			children = (
 				B466B43B22B0ACF4008D5F78 /* YMCollectionTest01ViewController.h */,
 				B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */,
+				B435889D232794BC0007FD55 /* YMCollectionTest02ViewController.h */,
+				B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -566,6 +584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D38518821A7CD660083CC41 /* Feeds.plist in Resources */,
+				B43B64DA22FD4544009AA0A5 /* arrow@2x.png in Resources */,
 				4D22686720D20675006D54D1 /* LaunchScreen.storyboard in Resources */,
 				4D22686420D20675006D54D1 /* Assets.xcassets in Resources */,
 				4D22686220D20673006D54D1 /* Main.storyboard in Resources */,
@@ -625,6 +644,7 @@
 				4DBAAB9A212D75A600F340C3 /* YMScrollView.m in Sources */,
 				4DB066F121C9EF1400700FFE /* YMSysAutoFeedTableViewCell.m in Sources */,
 				4D0EBFAB2137C14C0063D556 /* YMAlgorithmViewController.m in Sources */,
+				B4B16ADE22F3FFD70004BD56 /* YMNaviBarTestViewController.m in Sources */,
 				4D24B7A322366FC400B71755 /* YMThreadTestController.m in Sources */,
 				4D15ADF32147891900B36D0C /* YMSafeAreaViewController.m in Sources */,
 				4DA1D82B213F8778006B7683 /* YMNormalAlgorithmViewController.m in Sources */,
@@ -633,8 +653,10 @@
 				4D0EBFB02137CD370063D556 /* YMBinaryTreeViewController.m in Sources */,
 				4DD81E022181705400C3011B /* YMAnimationViewController.m in Sources */,
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
+				B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,
 				4D0DB42A21F07B6600CB4F07 /* YMBaseViewController.m in Sources */,
+				B43588A223279F150007FD55 /* YMProxy.m in Sources */,
 				4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */,
 				4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */,
 				4D8F5CF3215B3703005B855E /* YMFunc.m in Sources */,
