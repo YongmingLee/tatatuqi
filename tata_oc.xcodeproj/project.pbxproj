@@ -530,6 +530,7 @@
 				4D22685520D20673006D54D1 /* Resources */,
 				4D88DAD620FF27C000470445 /* Embed Frameworks */,
 				4D20EA0221536A6300DA9A78 /* ShellScript */,
+				25C2723F789F7875F4062EBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -594,6 +595,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		25C2723F789F7875F4062EBA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tata_oc/Pods-tata_oc-resources.sh",
+				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tata_oc/Pods-tata_oc-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4D20EA0221536A6300DA9A78 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -822,7 +845,7 @@
 				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
+				GCC_PREFIX_HEADER = "$SRCROOT/tata_oc/Public/YMHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -853,7 +876,7 @@
 				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
+				GCC_PREFIX_HEADER = "$SRCROOT/tata_oc/Public/YMHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

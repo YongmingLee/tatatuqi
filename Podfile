@@ -7,5 +7,6 @@ pod 'ReactiveObjC', '~> 3.1.0'
 pod 'YYModel'
 pod 'FBRetainCycleDetector'
 pod 'YMUtils'
+pod 'QMUIKit'
 
 end

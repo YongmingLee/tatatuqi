@@ -8,6 +8,7 @@
 
 #import "YMCommonViewController.h"
 #import <YMUtils/YMDeviceUtil.h>
+#import <QMUIKit/QMUIKit.h>
 
 typedef void (^TestBlock)(int);
 
@@ -104,6 +105,17 @@ typedef void (^TestBlock)(int);
     "以及整车制造相关、高端设备输出等方面展开深入合作，并将共同探索在渠道方面合作的可能性。";
     label.backgroundColor = [UIColor redColor];
     label.textColor = [UIColor whiteColor];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    QMUIAlertAction *action1 = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:NULL];
+    QMUIAlertAction *action2 = [QMUIAlertAction actionWithTitle:@"删除" style:QMUIAlertActionStyleDestructive handler:NULL];
+    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"确定删除？" message:@"删除后将无法恢复，请慎重考虑" preferredStyle:QMUIAlertControllerStyleAlert];
+    [alertController addAction:action1];
+    [alertController addAction:action2];
+    [alertController showWithAnimated:YES];
 }
 
 - (void)buttonClicked:(UIButton*)button {
