@@ -16,17 +16,17 @@
 @interface YMReactiveCocoaViewController ()
 @property (nonatomic, strong) NSString* stringValueTest;
 
-@property (nonatomic, strong) RACSubject* signalA;
-
-@property (nonatomic, strong) RACSubject* signalB;
-@property (nonatomic, strong) RACSubject* signalC;
-
-@property (nonatomic, strong) RACSubject* signalD;
-@property (nonatomic, strong) RACSubject* signalE;
-
-@property (nonatomic, strong) RACDisposable* intervalDisposable;
-
-@property (nonatomic, strong) id<RACSubscriber> subscriber;
+//@property (nonatomic, strong) RACSubject* signalA;
+//
+//@property (nonatomic, strong) RACSubject* signalB;
+//@property (nonatomic, strong) RACSubject* signalC;
+//
+//@property (nonatomic, strong) RACSubject* signalD;
+//@property (nonatomic, strong) RACSubject* signalE;
+//
+//@property (nonatomic, strong) RACDisposable* intervalDisposable;
+//
+//@property (nonatomic, strong) id<RACSubscriber> subscriber;
 
 @end
 
@@ -36,13 +36,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self test5];
+//    [self test5];
 }
 
 - (void)test1
 {
     // take 只取前几次的信号
     // throttle 节流
+    /*
     self.signalB = [RACSubject subject];
     self.signalC = [RACSubject subject];
     RACSignal* concatSignal = [self.signalB concat:self.signalC];
@@ -77,11 +78,13 @@
 
         [dispos dispose];
     });
+     */
 }
 
 // 创建信号，可以不用block，直接用RACSubject启动信号
 - (void)test2
 {
+    /*
     RACSubject* subject = [RACSubject subject];
     
     [subject sendNext:@(100)]; // 响应不到，因为还没有订阅
@@ -98,11 +101,13 @@
         
         [subject sendNext:@(500)];
     });
+     */
 }
 
 // RACReplaySubject 可以先订阅，事件激发后，可以激活
 - (void)test3
 {
+    /*
     RACReplaySubject* subject = [RACReplaySubject subject];
     
     [subject sendNext:@(100)]; // 可以响应，虽然还没有订阅，但是RACReplaySubject 支持后订阅收消息模式。
@@ -119,8 +124,9 @@
         
         [subject sendNext:@(500)];
     });
+     */
 }
-
+/*
 // 数组的分类，用于遍历
 - (void)test4
 {
@@ -202,10 +208,7 @@
     }];
     
     
-    /*
-     * combineLatest: 并的关系
-     * merge: 或的关系
-     */
+    
     
     // 组合信号测试 (∪)
     self.signalB = [RACSubject subject];
@@ -246,19 +249,19 @@
     // merge 测试
     [self.signalE sendNext:@1];
 }
-
+*/
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    [self triggerTest1];
+//    [self triggerTest1];
 }
 
 - (void)dealloc
 {
     NSLog(@"%@ dealloc...", NSStringFromClass([self class]));
     
-    if (self.intervalDisposable) {
-        [self.intervalDisposable dispose];
-    }
+//    if (self.intervalDisposable) {
+//        [self.intervalDisposable dispose];
+//    }
 }
 
 @end

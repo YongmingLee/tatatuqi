@@ -7,8 +7,8 @@
 //
 
 #import "YMCommonViewController.h"
-#import <YMUtils/YMDeviceUtil.h>
-#import <QMUIKit/QMUIKit.h>
+//#import <YMUtils/YMDeviceUtil.h>
+//#import <QMUIKit/QMUIKit.h>
 
 typedef void (^TestBlock)(int);
 
@@ -92,6 +92,22 @@ typedef void (^TestBlock)(int);
 //
 //    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
+    UILabel* title = [[UILabel alloc] init];
+    
+    title.textColor = [UIColor blueColor];
+    
+    NSMutableAttributedString* att = [[NSMutableAttributedString alloc] initWithString:@"哈哈哈我是红色字，哈哈哈哈"];
+    [att addAttribute:NSForegroundColorAttributeName value:UIColorFromHEX(0xFF0000) range:NSMakeRange(3, 5)];
+    title.attributedText = att;
+    
+    [self.view addSubview:title];
+    [title mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(0);
+        make.top.mas_equalTo(100);
+        make.height.mas_equalTo(30);
+    }];
+    
+    
     
     UILabel* label = [[UILabel alloc] init];
     [self.view addSubview:label];
@@ -110,12 +126,12 @@ typedef void (^TestBlock)(int);
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    QMUIAlertAction *action1 = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:NULL];
-    QMUIAlertAction *action2 = [QMUIAlertAction actionWithTitle:@"删除" style:QMUIAlertActionStyleDestructive handler:NULL];
-    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"确定删除？" message:@"删除后将无法恢复，请慎重考虑" preferredStyle:QMUIAlertControllerStyleAlert];
-    [alertController addAction:action1];
-    [alertController addAction:action2];
-    [alertController showWithAnimated:YES];
+//    QMUIAlertAction *action1 = [QMUIAlertAction actionWithTitle:@"取消" style:QMUIAlertActionStyleCancel handler:NULL];
+//    QMUIAlertAction *action2 = [QMUIAlertAction actionWithTitle:@"删除" style:QMUIAlertActionStyleDestructive handler:NULL];
+//    QMUIAlertController *alertController = [QMUIAlertController alertControllerWithTitle:@"确定删除？" message:@"删除后将无法恢复，请慎重考虑" preferredStyle:QMUIAlertControllerStyleAlert];
+//    [alertController addAction:action1];
+//    [alertController addAction:action2];
+//    [alertController showWithAnimated:YES];
 }
 
 - (void)buttonClicked:(UIButton*)button {

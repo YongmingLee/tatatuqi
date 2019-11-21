@@ -64,6 +64,10 @@
 		4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122242142275400BC3FED /* YMMathsViewController.m */; };
 		4DE122282142292300BC3FED /* YMThirdPartyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE122272142292300BC3FED /* YMThirdPartyViewController.m */; };
 		4DE1222B2142299200BC3FED /* YMUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DE1222A2142299200BC3FED /* YMUIViewController.m */; };
+		B40AFF662341C45A0098F28F /* UIDevice+YM.m in Sources */ = {isa = PBXBuildFile; fileRef = B40AFF652341C45A0098F28F /* UIDevice+YM.m */; };
+		B40AFF692341C4C40098F28F /* YMSoundUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = B40AFF682341C4C40098F28F /* YMSoundUtil.m */; };
+		B40AFF6C2341CEE80098F28F /* YMSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B40AFF6B2341CEE80098F28F /* YMSoundViewController.m */; };
+		B420442523430B82002CB8AB /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = B420442423430B82002CB8AB /* UIView+Extension.m */; };
 		B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */; };
 		B43588A223279F150007FD55 /* YMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B43588A123279F150007FD55 /* YMProxy.m */; };
 		B43B64DA22FD4544009AA0A5 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43B64D922FD4544009AA0A5 /* arrow@2x.png */; };
@@ -186,6 +190,14 @@
 		4DE1222A2142299200BC3FED /* YMUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMUIViewController.m; sourceTree = "<group>"; };
 		8170CAAD875E67BF14124E37 /* Pods-tata_oc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tata_oc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tata_oc/Pods-tata_oc.debug.xcconfig"; sourceTree = "<group>"; };
 		87E8F6D20EF3A5E21A39FE7D /* libPods-tata_oc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tata_oc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B40AFF642341C45A0098F28F /* UIDevice+YM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+YM.h"; sourceTree = "<group>"; };
+		B40AFF652341C45A0098F28F /* UIDevice+YM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+YM.m"; sourceTree = "<group>"; };
+		B40AFF672341C4C40098F28F /* YMSoundUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSoundUtil.h; sourceTree = "<group>"; };
+		B40AFF682341C4C40098F28F /* YMSoundUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSoundUtil.m; sourceTree = "<group>"; };
+		B40AFF6A2341CEE80098F28F /* YMSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMSoundViewController.h; sourceTree = "<group>"; };
+		B40AFF6B2341CEE80098F28F /* YMSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMSoundViewController.m; sourceTree = "<group>"; };
+		B420442323430B82002CB8AB /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		B420442423430B82002CB8AB /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		B435889D232794BC0007FD55 /* YMCollectionTest02ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCollectionTest02ViewController.h; sourceTree = "<group>"; };
 		B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCollectionTest02ViewController.m; sourceTree = "<group>"; };
 		B43588A023279F150007FD55 /* YMProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMProxy.h; sourceTree = "<group>"; };
@@ -242,8 +254,12 @@
 		4D0EBFB42137DB760063D556 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B420442323430B82002CB8AB /* UIView+Extension.h */,
+				B420442423430B82002CB8AB /* UIView+Extension.m */,
 				4D0EBFB52137DB8B0063D556 /* UIColor+Util.h */,
 				4D0EBFB62137DB8B0063D556 /* UIColor+Util.m */,
+				B40AFF642341C45A0098F28F /* UIDevice+YM.h */,
+				B40AFF652341C45A0098F28F /* UIDevice+YM.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -419,6 +435,8 @@
 			children = (
 				4D7AEC6C2136464600043593 /* YMCommonViewController.h */,
 				4D7AEC6D2136464600043593 /* YMCommonViewController.m */,
+				B40AFF6A2341CEE80098F28F /* YMSoundViewController.h */,
+				B40AFF6B2341CEE80098F28F /* YMSoundViewController.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -448,6 +466,8 @@
 				4D8F5CF2215B3703005B855E /* YMFunc.m */,
 				B43588A023279F150007FD55 /* YMProxy.h */,
 				B43588A123279F150007FD55 /* YMProxy.m */,
+				B40AFF672341C4C40098F28F /* YMSoundUtil.h */,
+				B40AFF682341C4C40098F28F /* YMSoundUtil.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -530,7 +550,6 @@
 				4D22685520D20673006D54D1 /* Resources */,
 				4D88DAD620FF27C000470445 /* Embed Frameworks */,
 				4D20EA0221536A6300DA9A78 /* ShellScript */,
-				25C2723F789F7875F4062EBA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -595,28 +614,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		25C2723F789F7875F4062EBA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tata_oc/Pods-tata_oc-resources.sh",
-				"${PODS_ROOT}/QMUIKit/QMUIKit/QMUIResources/QMUIResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/QMUIResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tata_oc/Pods-tata_oc-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4D20EA0221536A6300DA9A78 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,7 +675,10 @@
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,
+				B40AFF6C2341CEE80098F28F /* YMSoundViewController.m in Sources */,
 				4D0DB42A21F07B6600CB4F07 /* YMBaseViewController.m in Sources */,
+				B40AFF662341C45A0098F28F /* UIDevice+YM.m in Sources */,
+				B40AFF692341C4C40098F28F /* YMSoundUtil.m in Sources */,
 				B43588A223279F150007FD55 /* YMProxy.m in Sources */,
 				4DE122252142275400BC3FED /* YMMathsViewController.m in Sources */,
 				4D22687520D2086A006D54D1 /* YMScrollViewController.m in Sources */,
@@ -698,6 +698,7 @@
 				4D0EBFBA2137E2120063D556 /* YMDrawUtil.m in Sources */,
 				4D38518D21A805C20083CC41 /* YMFeedTableViewCell.m in Sources */,
 				4D8A336C2242365B00D6AA68 /* YMUITableViewTestViewController.m in Sources */,
+				B420442523430B82002CB8AB /* UIView+Extension.m in Sources */,
 				4D257E81221E3F290029BBCC /* YMTestSwipCellViewController.m in Sources */,
 				4D0DB42D21F07B8100CB4F07 /* YMReactiveCocoaViewController.m in Sources */,
 				4D38518421A7CB230083CC41 /* YMFeedModel.m in Sources */,
@@ -845,7 +846,7 @@
 				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = "$SRCROOT/tata_oc/Public/YMHeader.pch";
+				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -876,7 +877,7 @@
 				DEVELOPMENT_TEAM = Z74DM5Y4BP;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				GCC_PREFIX_HEADER = "$SRCROOT/tata_oc/Public/YMHeader.pch";
+				GCC_PREFIX_HEADER = $SRCROOT/tata_oc/Public/YMHeader.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/tata_oc/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

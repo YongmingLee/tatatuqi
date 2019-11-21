@@ -33,6 +33,33 @@ __VA_ARGS__; \
 }); \
 }
 
+// 防止多次调用
+#define kPreventRepeatClickTime(_seconds_) \
+static BOOL shouldPrevent; \
+if (shouldPrevent) return; \
+shouldPrevent = YES; \
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)((_seconds_) * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{ \
+shouldPrevent = NO; \
+}); \
+
+/* 使用示例
+ GuaExchangeGemsModel *model = self.dataSource[indexPath.row];
+ GGLogDebug(@"%@",model.strBalanceBeans);
+ if (model) {
+     kPreventRepeatClickTime(1.5);
+     if ([QLUserManager shareUserManager].userInforModel.realMoney >= [model.strBalanceBeans integerValue]) {
+     [self.currentController showWaitingHUD];
+     self.rmbToDiamondApi.userId = QLUserManager.shareUserManager.userInforModel.userID;
+     self.rmbToDiamondApi.inmoney = model.strExchangeGems;
+     self.rmbToDiamondApi.outMoney = model.strBalanceBeans;
+     [self.rmbToDiamondApi sendRMBtoDiamondRq];
+ }
+ else{
+    [self.currentController showWaitingAutoDismissHUDWithText:@"当前账户余额不足"];
+ }
+
+ */
+
 #pragma mark - 逻辑部分
 
 #define WS  __weak __typeof(&*self)weakSelf = self;

@@ -16,11 +16,7 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.title = @"Demo";
-    // Do any additional setup after loading the view, typically from a nib.
+- (void)setupUI {
     UITableView* tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     [self.view addSubview:tableView];
     self.tableView = tableView;
@@ -39,7 +35,16 @@
                          @{@"cls":@"YMUIViewController",@"desc":@"用户交互"},
                          @{@"cls":@"YMThreadTestController",@"desc":@"线程测试"},
                          @{@"cls":@"YMThirdPartyViewController",@"desc":@"第三方"},
-                         @{@"cls":@"YMCommonViewController",@"desc":@"基础"}];
+                         @{@"cls":@"YMCommonViewController",@"desc":@"基础"},
+                         @{@"cls":@"YMSoundViewController",@"desc":@"音频"}];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = @"Demo";
+    // Do any additional setup after loading the view, typically from a nib.
+    [self setupUI];
 }
 
 #pragma mark - UITableView
