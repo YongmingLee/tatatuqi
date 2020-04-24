@@ -71,6 +71,7 @@
 		B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B435889E232794BC0007FD55 /* YMCollectionTest02ViewController.m */; };
 		B43588A223279F150007FD55 /* YMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = B43588A123279F150007FD55 /* YMProxy.m */; };
 		B43B64DA22FD4544009AA0A5 /* arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B43B64D922FD4544009AA0A5 /* arrow@2x.png */; };
+		B44D6D522452B18B00379401 /* MSWeakTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B44D6D512452B18A00379401 /* MSWeakTimer.m */; };
 		B466B43D22B0ACF5008D5F78 /* YMCollectionTest01ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */; };
 		B4B16ADE22F3FFD70004BD56 /* YMNaviBarTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B16ADD22F3FFD70004BD56 /* YMNaviBarTestViewController.m */; };
 /* End PBXBuildFile section */
@@ -203,6 +204,8 @@
 		B43588A023279F150007FD55 /* YMProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMProxy.h; sourceTree = "<group>"; };
 		B43588A123279F150007FD55 /* YMProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMProxy.m; sourceTree = "<group>"; };
 		B43B64D922FD4544009AA0A5 /* arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@2x.png"; sourceTree = "<group>"; };
+		B44D6D502452B18A00379401 /* MSWeakTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSWeakTimer.h; sourceTree = "<group>"; };
+		B44D6D512452B18A00379401 /* MSWeakTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSWeakTimer.m; sourceTree = "<group>"; };
 		B466B43B22B0ACF4008D5F78 /* YMCollectionTest01ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMCollectionTest01ViewController.h; sourceTree = "<group>"; };
 		B466B43C22B0ACF4008D5F78 /* YMCollectionTest01ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMCollectionTest01ViewController.m; sourceTree = "<group>"; };
 		B4B16ADC22F3FFD70004BD56 /* YMNaviBarTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YMNaviBarTestViewController.h; sourceTree = "<group>"; };
@@ -455,6 +458,7 @@
 		4DE4644D212E588000E16AB0 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				B44D6D4F2452B18A00379401 /* MSWeakTimer */,
 				4D0EBFB42137DB760063D556 /* Category */,
 				4D19915921269742003D59D0 /* YMAIChatQQ.h */,
 				4D19915A21269742003D59D0 /* YMAIChatQQ.m */,
@@ -493,6 +497,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B44D6D4F2452B18A00379401 /* MSWeakTimer */ = {
+			isa = PBXGroup;
+			children = (
+				B44D6D502452B18A00379401 /* MSWeakTimer.h */,
+				B44D6D512452B18A00379401 /* MSWeakTimer.m */,
+			);
+			path = MSWeakTimer;
 			sourceTree = "<group>";
 		};
 		B466B43A22B0AC85008D5F78 /* CollectionView */ = {
@@ -675,6 +688,7 @@
 				4D19915B21269742003D59D0 /* YMAIChatQQ.m in Sources */,
 				B435889F232794BC0007FD55 /* YMCollectionTest02ViewController.m in Sources */,
 				4D0EBFBD2137F87C0063D556 /* YMRBTreeViewController.m in Sources */,
+				B44D6D522452B18B00379401 /* MSWeakTimer.m in Sources */,
 				B40AFF6C2341CEE80098F28F /* YMSoundViewController.m in Sources */,
 				4D0DB42A21F07B6600CB4F07 /* YMBaseViewController.m in Sources */,
 				B40AFF662341C45A0098F28F /* UIDevice+YM.m in Sources */,

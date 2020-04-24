@@ -9,6 +9,7 @@
 #import "YMCommonViewController.h"
 //#import <YMUtils/YMDeviceUtil.h>
 //#import <QMUIKit/QMUIKit.h>
+#import "MSWeakTimer.h"
 
 typedef void (^TestBlock)(int);
 
@@ -44,12 +45,19 @@ typedef void (^TestBlock)(int);
 @property (nonatomic, strong) dispatch_semaphore_t sem;
 @property (nonatomic, strong) dispatch_queue_t testQueue;
 
+@property (nonatomic, strong) MSWeakTimer* testTimer;
+@property (nonatomic, strong) MASConstraint* testConstraint;
+@property (nonatomic, strong) MASConstraint* testLeftConstraint;
+
 @end
 
 @implementation YMCommonViewController
 
 - (void)dealloc
 {
+    if (self.testTimer) {
+        [self.testTimer invalidate];
+    }
     NSLog(@"%@ %@...",NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 }
 
@@ -92,35 +100,37 @@ typedef void (^TestBlock)(int);
 //
 //    [button addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
     
-    UILabel* title = [[UILabel alloc] init];
+//    UILabel* title = [[UILabel alloc] init];
+//
+//    title.textColor = [UIColor blueColor];
+//
+//    NSMutableAttributedString* att = [[NSMutableAttributedString alloc] initWithString:@"哈哈哈我是红色字，哈哈哈哈"];
+//    [att addAttribute:NSForegroundColorAttributeName value:UIColorFromHEX(0xFF0000) range:NSMakeRange(3, 5)];
+//    title.attributedText = att;
+//
+//    [self.view addSubview:title];
+//    [title mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.mas_equalTo(0);
+//        make.top.mas_equalTo(100);
+//        make.height.mas_equalTo(30);
+//    }];
+//
+//
+//
+//    UILabel* label = [[UILabel alloc] init];
+//    [self.view addSubview:label];
+//    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.center.equalTo(self.view);
+//        make.width.mas_equalTo(200);
+//    }];
+//
+//    label.numberOfLines = 0;
+//    label.text = @"威马汽车与格力电器签署战略合作协议，双方将在智能制造、车家智能互联等智能化相关领域，"
+//    "以及整车制造相关、高端设备输出等方面展开深入合作，并将共同探索在渠道方面合作的可能性。";
+//    label.backgroundColor = [UIColor redColor];
+//    label.textColor = [UIColor whiteColor];
     
-    title.textColor = [UIColor blueColor];
-    
-    NSMutableAttributedString* att = [[NSMutableAttributedString alloc] initWithString:@"哈哈哈我是红色字，哈哈哈哈"];
-    [att addAttribute:NSForegroundColorAttributeName value:UIColorFromHEX(0xFF0000) range:NSMakeRange(3, 5)];
-    title.attributedText = att;
-    
-    [self.view addSubview:title];
-    [title mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(100);
-        make.height.mas_equalTo(30);
-    }];
-    
-    
-    
-    UILabel* label = [[UILabel alloc] init];
-    [self.view addSubview:label];
-    [label mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.equalTo(self.view);
-        make.width.mas_equalTo(200);
-    }];
-    
-    label.numberOfLines = 0;
-    label.text = @"威马汽车与格力电器签署战略合作协议，双方将在智能制造、车家智能互联等智能化相关领域，"
-    "以及整车制造相关、高端设备输出等方面展开深入合作，并将共同探索在渠道方面合作的可能性。";
-    label.backgroundColor = [UIColor redColor];
-    label.textColor = [UIColor whiteColor];
+    [self testCenterHorizon];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -326,6 +336,88 @@ typedef void (^TestBlock)(int);
             NSLog(@"item2:%d", (int)i);
         });
     }
+}
+
+- (void)testCenterHorizon {
+    UIView* containerView = [[UIView alloc] init];
+    [self.view addSubview:containerView];
+    [containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view);
+        make.height.mas_equalTo(40);
+    }];
+    containerView.backgroundColor = [UIColor redColor];
+    
+    UILabel* label = [[UILabel alloc] init];
+    [containerView addSubview:label];
+    label.text = @"asdlfjlajsdlfj123";
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.bottom.mas_equalTo(0);
+        make.left.mas_equalTo(10);
+    }];
+    label.backgroundColor = [UIColor yellowColor];
+    
+    UIView* smallBlockView = [[UIView alloc] init];
+    smallBlockView.backgroundColor = [UIColor blueColor];
+    [containerView addSubview:smallBlockView];
+    [smallBlockView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(20, 20));
+        self.testConstraint = make.centerY.mas_equalTo(0);
+        make.right.mas_equalTo(-10);
+        self.testLeftConstraint = make.left.equalTo(label.mas_right);
+    }];
+    
+    self.testTimer = [MSWeakTimer scheduledTimerWithTimeInterval:.5 target:self selector:@selector(handleTestTimer) userInfo:nil repeats:YES dispatchQueue:dispatch_get_main_queue()];
+}
+
+- (void)handleTestTimer {
+    if (!self.testConstraint) {
+        NSLog(@"The constraint not ready");
+        return;
+    }
+    
+    static int i = 0;
+    i ++;
+    
+    int n = i % 4;
+    NSLog(@"testV:%d", n);
+    
+    // Clockwise
+    
+    [UIView animateWithDuration:.3 animations:^{
+        
+        switch (n) {
+            case 0: // 12点钟方向
+            {
+                self.testLeftConstraint.offset(10);
+                self.testConstraint.mas_equalTo(-5);
+            }
+                break;
+            case 1:
+            {
+                self.testLeftConstraint.offset(15);
+                self.testConstraint.mas_equalTo(0);
+            }
+                break;
+            case 2:
+            {
+                self.testLeftConstraint.offset(10);
+                self.testConstraint.mas_equalTo(5);
+            }
+                break;
+            case 3:
+            {
+                self.testLeftConstraint.offset(5);
+                self.testConstraint.mas_equalTo(0);
+            }
+                break;
+                
+            default:
+                break;
+        }
+        
+        [self.view layoutIfNeeded];
+    }];
 }
 
 @end
