@@ -8,7 +8,7 @@
 
 #import "YMAutoFeedViewController.h"
 #import "YMAutoFeedTableViewCell.h"
-#import <UITableView+FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import <UITableView+FDTemplateLayoutCell.h>
 
 @interface YMAutoFeedViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView* tableView;

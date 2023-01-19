@@ -1,12 +1,13 @@
-platform:ios,'8.0'
+# source 'https://gitee.com/sadusaga/ymutil-spec.git'
+
+platform:ios,'11.0'
+use_frameworks!
 
 target 'tata_oc' do
-pod 'Masonry'
-pod 'UITableView+FDTemplateLayoutCell'
-# pod 'ReactiveObjC', '~> 3.1.0'
-pod 'YYModel'
-# pod 'FBRetainCycleDetector'
-pod 'YMUtils'
-# pod 'QMUIKit'
-
+	pod 'Masonry'
+	pod 'SDWebImage'
+	pod 'UITableView+FDTemplateLayoutCell'
+	pod 'YYModel'
+	pod 'KVOController'
+	# pod 'ymutil'
 end

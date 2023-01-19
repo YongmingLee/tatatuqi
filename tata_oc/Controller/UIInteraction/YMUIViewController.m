@@ -25,6 +25,7 @@
     
     tableView.dataSource = self;
     tableView.delegate = self;
+    tableView.backgroundColor = [UIColor greenColor];
     
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
@@ -40,18 +41,21 @@
                          @{@"cls":@"YMUITableViewTestViewController",@"desc":@"UITableView测试"},
                          @{@"cls":@"YMCollectionTest01ViewController",@"desc":@"UICollectionView测试01"},
                          @{@"cls":@"YMCollectionTest02ViewController",@"desc":@"UICollectionView测试02"},
-                         @{@"cls":@"YMNaviBarTestViewController",@"desc":@"NavBar测试"}];
+                         @{@"cls":@"YMNaviBarTestViewController",@"desc":@"NavBar测试"},
+                         @{@"cls":@"YMRoundCellTestViewController",@"desc":@"圆形Cell测试"},
+                         @{@"cls":@"YMRotationViewController",@"desc":@"旋转测试"},
+                         @{@"cls":@"YMTestLayoutViewController",@"desc":@"Layout测试"},
+                         @{@"cls":@"YMWebViewController",@"desc":@"webview"}];
 }
 
 #pragma mark - UITableView
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.dataSources.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"testcell"];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"testcell"];
@@ -66,8 +70,8 @@
     return cell;
 }
 
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSDictionary* data = [self.dataSources objectAtIndex:indexPath.row];
@@ -76,7 +80,6 @@
     
     UIViewController* vc = [[vcCLS alloc] init];
     vc.title = data[@"desc"];
-    vc.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

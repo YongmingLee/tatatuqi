@@ -37,10 +37,82 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
  
-    [self testAutoScrollView];
+//    [self testAutoScrollView];
 //    [self testIntegrate];
+    
+    [self testEasyLayout];
 }
 
+- (void)testEasyLayout {
+    UIScrollView* scrollView = [[UIScrollView alloc] init];
+    [self.view addSubview:scrollView];
+    
+    
+    UIView* view1 = [[UIView alloc] init];
+    [scrollView addSubview:view1];
+    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.top.mas_equalTo(0);
+        make.height.mas_equalTo(600);
+        make.width.mas_equalTo(kScreenWidth);
+    }];
+    view1.backgroundColor = [UIColor redColor];
+    
+    UIView* view2 = [[UIView alloc] init];
+    [scrollView addSubview:view2];
+    [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(0);
+        make.height.mas_equalTo(600);
+        make.top.equalTo(view1.mas_bottom);
+        make.width.mas_equalTo(kScreenWidth);
+    }];
+    view2.backgroundColor = [UIColor greenColor];
+    
+    [scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+        make.bottom.mas_equalTo(-100);
+        make.bottom.equalTo(view2.mas_bottom);
+    }];
+    
+    
+    [self addTestButton:view1 tag:10];
+    [self addTestButton:view2 tag:11];
+}
+
+- (void)addTestButton:(UIView*)parentView tag:(NSInteger)tag {
+    UIButton* testButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [testButton setTitle:@"测试按钮" forState:UIControlStateNormal];
+    testButton.backgroundColor = [UIColor blueColor];
+    testButton.tag = tag;
+    
+    [parentView addSubview:testButton];
+    
+    [testButton addTarget:self action:@selector(testButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [testButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.mas_equalTo(0);
+        make.height.mas_equalTo(50);
+    }];
+}
+
+- (void)testButtonClicked:(UIButton*)button {
+    UIAlertAction* action = [UIAlertAction actionWithTitle:@"测试内容" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction* action2 = [UIAlertAction actionWithTitle:@"测试内容2" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertAction* action3 = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        
+    }];
+    UIAlertController* alertViewController = [UIAlertController alertControllerWithTitle:@"提示" message:@"测试提示" preferredStyle:(button.tag == 10) ? UIAlertControllerStyleAlert : UIAlertControllerStyleActionSheet];
+    [alertViewController addAction:action];
+    [alertViewController addAction:action2];
+    [alertViewController addAction:action3];
+    
+    [self presentViewController:alertViewController animated:YES completion:^{
+            
+    }];
+    
+}
 
 /**
  通过约束实现scroll布局

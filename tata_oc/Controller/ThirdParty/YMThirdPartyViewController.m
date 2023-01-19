@@ -30,8 +30,10 @@
         make.edges.equalTo(self.view);
     }];
     
+    
     self.dataSources = @[@{@"cls":@"YMChatViewController",@"desc":@"QQ闲聊SDK"},
-                         @{@"cls":@"YMReactiveCocoaViewController",@"desc":@"ReactiveCocoa"}];
+                         @{@"cls":@"YMReactiveCocoaViewController",@"desc":@"ReactiveCocoa"},
+                         @{@"cls":@"YMFBKVOViewController",@"desc":@"FBKVOController测试"}];
 }
 
 #pragma mark - UITableView
@@ -67,7 +69,6 @@
     
     UIViewController* vc = [[vcCLS alloc] init];
     vc.title = data[@"desc"];
-    vc.edgesForExtendedLayout = UIRectEdgeNone;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

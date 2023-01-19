@@ -12,6 +12,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+/// 是否强制横屏
+@property (assign , nonatomic) BOOL isForceLandscape;
 
 @end
 

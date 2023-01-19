@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface YMBaseViewController : UIViewController
 
+/// 强制横屏
+/// @param isForce 是否强制
+- (void)forceOrientationLandscape:(BOOL)isForce;
+
 @end
 
 NS_ASSUME_NONNULL_END

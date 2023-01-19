@@ -138,4 +138,22 @@
 {
     return self.frame.origin;
 }
+
+#pragma mark - Corner
+
+- (void)addRoundCorner:(CGFloat)radius {
+    [self cornerWithRadius:radius byRoundingCorners:UIRectCornerAllCorners];
+}
+
+- (void)cornerWithRadius:(CGFloat)radius byRoundingCorners:(UIRectCorner)corners {
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        layer.path = [UIBezierPath bezierPathWithRoundedRect:self.bounds
+                                           byRoundingCorners:corners
+                                                 cornerRadii:CGSizeMake(radius, radius)]
+        .CGPath;
+    });
+    self.layer.mask = layer;
+}
+
 @end

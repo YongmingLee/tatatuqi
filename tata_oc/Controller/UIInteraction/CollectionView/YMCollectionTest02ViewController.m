@@ -19,6 +19,7 @@
     if (self = [super initWithFrame:frame]) {
         
         self.backgroundColor = [UIColor randomColor];
+        self.layer.cornerRadius = 20;
     }
     
     return self;
@@ -43,33 +44,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = UIColorFromHEX(0xF3F2F6);
     
-    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-    CGFloat w = kScreenWidth * .5 - 4;
-    layout.itemSize = CGSizeMake(w, w);
-    layout.minimumLineSpacing = 0;
-    layout.minimumInteritemSpacing = 0;
+    const CGFloat itemWidth = (kScreenWidth - 15) * 0.5;
+    const CGFloat itemGap = 5;
+    UIEdgeInsets edge = UIEdgeInsetsZero;
+    if (@available(iOS 11.0, *)) {
+        edge = [UIApplication sharedApplication].delegate.window.safeAreaInsets;
+    }
     
-    UICollectionView* _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-    _collectionView.showsHorizontalScrollIndicator = NO;
-    _collectionView.showsVerticalScrollIndicator = NO;
-    _collectionView.backgroundColor = [UIColor clearColor];
-    [_collectionView registerClass:[JLNormalCollectionViewCell class] forCellWithReuseIdentifier:@"YMNormalCollectionViewCell"];
-    
-    _collectionView.dataSource = self;
-    _collectionView.delegate = self;
-    
-    _collectionView.backgroundColor = [UIColor yellowColor];
-    
-    self.collectionView = _collectionView;
-    
-    [self.view addSubview:_collectionView];
-    
-    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
+    self.collectionView = [DGUIKitHelper collectionViewWithScrollDirection:UICollectionViewScrollDirectionVertical lineSpacing:itemGap interSpacing:itemGap itemSize:CGSizeMake(itemWidth, itemWidth) parentView:self.view constraintBlock:^(MASConstraintMaker * _Nonnull make) {
+        make.left.mas_equalTo(5);
+        make.right.mas_equalTo(-5);
+        make.top.mas_equalTo(edge.top + self.navigationController.navigationBar.frame.size.height + 5);
+        make.bottom.mas_equalTo(-edge.bottom-5);
     }];
+    
+    self.collectionView.backgroundColor = UIColorFromHEX(0xF3F2F6);
+    [self.collectionView registerClass:[JLNormalCollectionViewCell class] forCellWithReuseIdentifier:@"YMNormalCollectionViewCell"];
+    self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     
     NSTimer* timer = [NSTimer timerWithTimeInterval:.1 target:[YMProxy proxyWithTarget:self] selector:@selector(testTimerHandler:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];

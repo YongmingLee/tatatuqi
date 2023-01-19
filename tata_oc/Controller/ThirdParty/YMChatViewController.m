@@ -31,18 +31,18 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UITextField* txt = [[UITextField alloc] init];
-    txt.borderStyle = UITextBorderStyleRoundedRect;
-    [self.view addSubview:txt];
-    txt.placeholder = @"说点什么...";
-    [txt mas_makeConstraints:^(MASConstraintMaker *make) {
+    UITextField* textField = [[UITextField alloc] init];
+    textField.borderStyle = UITextBorderStyleRoundedRect;
+    [self.view addSubview:textField];
+    textField.placeholder = @"说点什么...";
+    [textField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.view).offset(6);
-        make.top.mas_equalTo(6);
+        make.top.mas_equalTo(kNavItemBarHeight + 6);
         make.right.equalTo(self.view).offset(-6);
         make.height.mas_equalTo(30);
     }];
     
-    self.textField = txt;
+    self.textField = textField;
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(sendAction)];
     
@@ -50,10 +50,14 @@
     [self.view addSubview:tableView];
     tableView.dataSource = self;
     [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+//    [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.left.right.equalTo(self.view);
+//        make.top.mas_equalTo(txt.mas_bottom).offset(5);
+//        make.height.mas_equalTo(200);
+//    }];
     [tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(self.view);
-        make.top.mas_equalTo(txt.mas_bottom).offset(5);
-        make.height.mas_equalTo(200);
+        make.top.equalTo(textField.mas_bottom).offset(4);
+        make.left.right.bottom.mas_equalTo(0);
     }];
     
     self.chats = [NSMutableArray array];
